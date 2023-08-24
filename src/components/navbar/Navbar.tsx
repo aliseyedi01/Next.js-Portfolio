@@ -23,7 +23,7 @@ interface NavItem {
 const navItemsData: NavItem[] = [
   {
     name: "Home",
-    link: "#",
+    link: "#home",
     icon: <HomeIcon />,
   },
   {
@@ -56,7 +56,7 @@ const navItemsData: NavItem[] = [
 export const Navbar: React.FC = () => (
   <div className="relative">
     {/* Desktop & Mobile header */}
-    <header className="fixed top-0 flex w-full items-center justify-between p-2 px-4 backdrop-blur-md">
+    <header className="fixed top-0 flex h-12  w-full items-center justify-between p-2 px-4 backdrop-blur-md">
       {/* Title */}
       <h2 className="text-sm md:text-base">Ali Seyedi</h2>
       <div className="flex items-center gap-12">
