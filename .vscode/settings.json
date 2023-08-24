@@ -1,3 +1,14 @@
 {
-  "cSpell.ignoreWords": ["Seyedi", "aboutme", "clsx", "lucide", "rlig", "shadcn", "tailwindcss"]
+  "cSpell.ignoreWords": [
+    "Antdesign",
+    "Nextdotjs",
+    "Seyedi",
+    "Supabase",
+    "aboutme",
+    "clsx",
+    "lucide",
+    "rlig",
+    "shadcn",
+    "tailwindcss"
+  ]
 }
