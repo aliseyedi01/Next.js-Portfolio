@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
   return (
     <div
       id="home"
-      className="grid h-screen w-full  grid-cols-1 place-content-center justify-items-center gap-2 md:grid-cols-2 "
+      className="grid h-screen w-full grid-cols-1 place-content-center justify-items-center gap-2 md:grid-cols-2 "
     >
       {/* info */}
       <div className="grid space-y-4 place-self-center self-center">
@@ -21,9 +21,9 @@ export const Home: React.FC = () => {
           className="rounded-full"
         />
         <h1 className=" bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text text-2xl font-bold tracking-wider text-transparent md:text-5xl">
-          I'm Ali Seyedi
+          Ali Seyedi
         </h1>
-        <h2 className="font-mono text-lg font-semibold text-indigo-950 md:text-2xl">
+        <h2 className="font-mono text-lg font-semibold text-indigo-950 dark:text-indigo-500 md:text-2xl">
           Front-End Web Developer
         </h2>
         <div className="flex gap-3 self-end">
