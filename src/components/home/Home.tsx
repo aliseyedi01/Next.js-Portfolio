@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
   return (
     <div
       id="home"
-      className="grid h-screen w-full grid-cols-1 place-content-center justify-items-center gap-2 md:grid-cols-2 "
+      className="grid h-screen w-full snap-start grid-cols-1 place-content-center justify-items-center gap-2 md:grid-cols-2 "
     >
       {/* info */}
       <div className="grid space-y-4 place-self-center self-center">

@@ -74,7 +74,7 @@ const Skills: React.FC = () => {
   return (
     <div
       id="skills"
-      className="grid h-screen w-full grid-cols-1 place-content-center place-items-center gap-6 p-5 pt-[500px] md:grid-cols-3 md:p-10"
+      className="grid h-screen w-full snap-center grid-cols-1 place-content-center place-items-center gap-6 p-5 pt-[500px] md:grid-cols-3 md:p-10"
     >
       {skillCategories.map((category, index) => (
         <div

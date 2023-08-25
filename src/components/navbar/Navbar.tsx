@@ -65,6 +65,7 @@ export const Navbar: React.FC = () => (
           {navItemsData.map((item) => (
             <Link
               href={item.link}
+              key={item.name}
               className="flex items-center gap-1 hover:border-b hover:border-red-400"
             >
               {item.name}
@@ -80,7 +81,7 @@ export const Navbar: React.FC = () => (
     <header className="fixed bottom-2 left-0 w-full p-2 md:hidden">
       <nav className="mx-5 flex items-center justify-center gap-8 rounded-full border border-indigo-400 py-2 backdrop-blur-lg dark:border-red-500">
         {navItemsData.map((item) => (
-          <Link href={item.link} className="flex items-center gap-1">
+          <Link key={item.link} href={item.link} className="flex items-center gap-1">
             <span className="font-bold text-indigo-600 dark:text-yellow-400">{item.icon}</span>
           </Link>
         ))}

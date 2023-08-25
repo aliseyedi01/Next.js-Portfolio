@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    @apply box-border border-border;
+  }
+  html {
+    @apply snap-y snap-mandatory scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer base {
   :root {
     --background: 214 100% 97%;
     --foreground: 222.2 84% 4.9%;
@@ -46,15 +59,5 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
-  }
-}
-
-@layer base {
-  * {
-    @apply box-border border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
