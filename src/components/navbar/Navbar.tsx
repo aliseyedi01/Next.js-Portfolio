@@ -23,33 +23,33 @@ interface NavItem {
 const navItemsData: NavItem[] = [
   {
     name: "Home",
-    link: "#home",
+    link: "/#home",
     icon: <HomeIcon />,
   },
   {
     name: "About",
-    link: "#about",
+    link: "/#about",
     icon: <InfoCircledIcon />,
   },
   {
     name: "Skills",
-    link: "#skills",
+    link: "/#skills",
     icon: <RocketIcon />,
   },
   {
     name: "Projects",
-    link: "#projects",
+    link: "/#projects",
     icon: <LaptopIcon />,
   },
   {
-    name: "Resume",
-    link: "#resume",
-    icon: <FileTextIcon />,
+    name: "Contact",
+    link: "/#contact",
+    icon: <ChatBubbleIcon />,
   },
   {
-    name: "Contact",
-    link: "#contact",
-    icon: <ChatBubbleIcon />,
+    name: "Resume",
+    link: "/resume",
+    icon: <FileTextIcon />,
   },
 ];
 

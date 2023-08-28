@@ -2,13 +2,17 @@
   "cSpell.ignoreWords": [
     "Antdesign",
     "Nextdotjs",
+    "PSPDF",
     "Seyedi",
     "Supabase",
     "aboutme",
     "clsx",
     "lucide",
+    "pspdfkit",
+    "reactjs",
     "rlig",
     "shadcn",
+    "svgr",
     "tailwindcss"
   ]
 }

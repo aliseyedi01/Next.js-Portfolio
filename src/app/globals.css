@@ -7,7 +7,8 @@
     @apply box-border border-border;
   }
   html {
-    @apply snap-y snap-mandatory scroll-smooth;
+    @apply scroll-smooth;
+    /* @apply snap-y snap-mandatory scroll-smooth; */
   }
   body {
     @apply bg-background text-foreground;
