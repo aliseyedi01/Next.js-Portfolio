@@ -70,7 +70,10 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="order-1 w-5/6 space-y-6 md:order-2 md:w-2/3"
+      >
         {/* UserName Field */}
         <FormField
           control={form.control}

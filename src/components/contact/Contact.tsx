@@ -1,13 +1,14 @@
 import React from "react";
 import { ContactForm } from "./ContactForm";
+import SocialMedia from "./SocialMedia";
 
 const Contact: React.FC = () => {
   return (
     <div
       id="contact"
-      className="grid h-screen w-full snap-end grid-cols-1 place-content-center place-items-center pt-14 md:grid-cols-2"
+      className="grid h-screen w-full snap-end grid-cols-1 place-content-center place-items-center pt-40 md:grid-cols-2"
     >
-      <div>Social Media</div>
+      <SocialMedia />
       <ContactForm />
     </div>
   );

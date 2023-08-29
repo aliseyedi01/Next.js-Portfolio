@@ -23,54 +23,54 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 
-const Skills: React.FC = () => {
-  const skillCategories = [
-    {
-      title: "Language",
-      skills: [
-        { name: "JavaScript", icon: <BiLogoJavascript /> },
-        { name: "TypeScript", icon: <BiLogoTypescript /> },
-      ],
-    },
-    {
-      title: "Library & Framework",
-      skills: [
-        { name: "React.js", icon: <BiLogoReact /> },
-        { name: "Next.js", icon: <SiNextdotjs /> },
-        { name: "Redux", icon: <BiLogoRedux /> },
-        { name: "Redux Toolkit", icon: <BiCubeAlt /> },
-      ],
-    },
-    {
-      title: "Style",
-      skills: [
-        { name: "CSS", icon: <BiLogoCss3 /> },
-        { name: "Sass", icon: <BiLogoSass /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-        { name: "Bootstrap", icon: <SiBootstrap /> },
-      ],
-    },
-    {
-      title: "Component Library",
-      skills: [
-        { name: "Material-UI", icon: <BiLibrary /> },
-        { name: "Ant Design", icon: <SiAntdesign /> },
-        { name: "Shadcn UI", icon: <BiCodeAlt /> },
-      ],
-    },
-    {
-      title: "Tools",
-      skills: [
-        { name: "Git", icon: <BiLogoGit /> },
-        { name: "GitHub", icon: <SiGithub /> },
-        { name: "Postman", icon: <SiPostman /> },
-        { name: "Firebase", icon: <SiFirebase /> },
-        { name: "Supabase", icon: <SiSupabase /> },
-        { name: "Figma", icon: <SiFigma /> },
-      ],
-    },
-  ];
+const skillCategories = [
+  {
+    title: "Language",
+    skills: [
+      { name: "JavaScript", icon: <BiLogoJavascript /> },
+      { name: "TypeScript", icon: <BiLogoTypescript /> },
+    ],
+  },
+  {
+    title: "Library & Framework",
+    skills: [
+      { name: "React.js", icon: <BiLogoReact /> },
+      { name: "Next.js", icon: <SiNextdotjs /> },
+      { name: "Redux", icon: <BiLogoRedux /> },
+      { name: "Redux Toolkit", icon: <BiCubeAlt /> },
+    ],
+  },
+  {
+    title: "Style",
+    skills: [
+      { name: "CSS", icon: <BiLogoCss3 /> },
+      { name: "Sass", icon: <BiLogoSass /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+      { name: "Bootstrap", icon: <SiBootstrap /> },
+    ],
+  },
+  {
+    title: "Component Library",
+    skills: [
+      { name: "Material-UI", icon: <BiLibrary /> },
+      { name: "Ant Design", icon: <SiAntdesign /> },
+      { name: "Shadcn UI", icon: <BiCodeAlt /> },
+    ],
+  },
+  {
+    title: "Tools",
+    skills: [
+      { name: "Git", icon: <BiLogoGit /> },
+      { name: "GitHub", icon: <SiGithub /> },
+      { name: "Postman", icon: <SiPostman /> },
+      { name: "Firebase", icon: <SiFirebase /> },
+      { name: "Supabase", icon: <SiSupabase /> },
+      { name: "Figma", icon: <SiFigma /> },
+    ],
+  },
+];
 
+const Skills: React.FC = () => {
   return (
     <div
       id="skills"
