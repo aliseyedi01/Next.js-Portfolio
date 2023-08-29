@@ -10,18 +10,18 @@ const Resume: React.FC = () => {
   return (
     <div
       id="resume"
-      className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 pb-5 pt-14"
+      className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 pb-14 pt-12   md:pb-5 md:pt-14"
     >
       <Link href={pathPdf}>
-        <Button>Download CV</Button>
+        <Button className="text-sm md:text-base">Download CV</Button>
       </Link>
-      <object
-        className="w-full rounded-lg border-2 border-red-400 md:w-[80%]"
-        height="100%"
-        width="100%"
-        type="application/pdf"
-        data={pathPdf}
-      ></object>
+      <div className="h-full w-[98%] md:w-[80%]">
+        <object
+          className="h-full w-full rounded-lg border-2 border-red-400 object-cover"
+          type="application/pdf"
+          data={pathPdf}
+        ></object>
+      </div>
     </div>
   );
 };
