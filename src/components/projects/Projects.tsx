@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
   return (
     <div
       id="projects"
-      className="flex h-screen w-full snap-center flex-col items-center justify-center gap-8 p-4"
+      className="flex h-fit w-full snap-center flex-col items-center justify-center gap-8 p-4 pt-14 md:h-screen"
     >
       <div className="flex flex-wrap items-center justify-center gap-12">
         <ProjectCard />

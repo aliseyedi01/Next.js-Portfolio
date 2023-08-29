@@ -74,14 +74,14 @@ const Skills: React.FC = () => {
   return (
     <div
       id="skills"
-      className="grid h-screen w-full snap-center grid-cols-1 place-content-center place-items-center gap-6 p-5 pt-[500px] md:grid-cols-3 md:p-10"
+      className="grid h-fit w-full snap-center grid-cols-1 place-content-center place-items-center gap-6 p-5 pt-14 md:h-screen md:grid-cols-3 md:p-10"
     >
       {skillCategories.map((category, index) => (
         <div
           key={index}
           className="flex h-full w-full flex-col items-start justify-start rounded-xl p-2 hover:bg-blue-200 dark:hover:bg-blue-900"
         >
-          <h3 className="w-full border-b-2 border-indigo-700 pb-1 text-xl font-bold">
+          <h3 className="w-full border-b-2 border-indigo-700 pb-1 text-xl font-bold max-md:text-center">
             {category.title}
           </h3>
           <div className="grid w-full grid-flow-col grid-cols-2 grid-rows-3 place-items-start justify-center gap-1 space-y-1 p-2">

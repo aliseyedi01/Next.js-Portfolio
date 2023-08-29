@@ -4,7 +4,7 @@ const About: React.FC = () => {
   return (
     <div
       id="about"
-      className="grid h-screen w-full snap-center grid-cols-1 flex-col place-items-center justify-items-center px-4 pt-12 md:grid-cols-2"
+      className="grid h-fit w-full snap-center grid-cols-1 flex-col place-items-center justify-items-center px-4 pt-14 md:h-screen md:grid-cols-2"
     >
       <img src="/svg/about.svg" alt="about" className="hidden h-[500px] w-[500px] md:block" />
       <div className="flex flex-col items-start justify-start gap-3 px-5">

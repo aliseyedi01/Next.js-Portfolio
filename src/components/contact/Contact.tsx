@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
   return (
     <div
       id="contact"
-      className="grid h-screen w-full snap-end grid-cols-1 place-content-center place-items-center pt-40 md:grid-cols-2"
+      className="grid h-screen w-full snap-end grid-cols-1 place-content-center place-items-center pt-12 max-md:pb-20 md:h-screen md:snap-end md:grid-cols-2"
     >
       <SocialMedia />
       <ContactForm />
