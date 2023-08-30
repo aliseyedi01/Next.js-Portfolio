@@ -6,7 +6,6 @@ import {
   InfoCircledIcon,
   RocketIcon,
   ChatBubbleIcon,
-  FileTextIcon,
   LaptopIcon,
 } from "@radix-ui/react-icons";
 // next
@@ -14,6 +13,7 @@ import Link from "next/link";
 // component
 import { ModeToggle } from "../theme/ModeToggle";
 import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
 // types
 interface NavItem {
   name: string;
@@ -23,34 +23,35 @@ interface NavItem {
 
 const navItemsData: NavItem[] = [
   {
-    name: "Home",
-    link: "#home",
+    name: "home",
+    link: "/#home",
     icon: <HomeIcon />,
   },
   {
-    name: "About",
-    link: "#about",
+    name: "about",
+    link: "/#about",
     icon: <InfoCircledIcon />,
   },
   {
-    name: "Skills",
-    link: "#skills",
+    name: "skills",
+    link: "/#skills",
     icon: <RocketIcon />,
   },
   {
-    name: "Projects",
-    link: "#projects",
+    name: "projects",
+    link: "/#projects",
     icon: <LaptopIcon />,
   },
   {
-    name: "Contact",
-    link: "#contact",
+    name: "contact",
+    link: "/#contact",
     icon: <ChatBubbleIcon />,
   },
 ];
 
 export const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Callback function when an observed section comes into view
@@ -67,7 +68,8 @@ export const Navbar: React.FC = () => {
     });
     // Observe each section
     navItemsData.forEach((item) => {
-      const section = document.querySelector(item.link);
+      const section = document.getElementById(item.name);
+      console.log("section", section);
       if (section) {
         observer.observe(section);
       }
@@ -75,7 +77,7 @@ export const Navbar: React.FC = () => {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <div className="relative">
@@ -89,7 +91,7 @@ export const Navbar: React.FC = () => {
             <Link
               href={item.link}
               key={item.name}
-              className={`flex items-center gap-1 hover:border-b ${
+              className={`flex items-center gap-1 capitalize hover:border-b ${
                 activeSection == item.name.toLowerCase()
                   ? "border-b border-indigo-500 text-indigo-800"
                   : ""
