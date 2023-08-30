@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+import { ScrollTop } from "@/components";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}
+          <ScrollTop />
           <Toaster />
         </ThemeProvider>
       </body>

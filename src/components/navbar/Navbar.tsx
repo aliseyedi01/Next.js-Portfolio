@@ -69,7 +69,6 @@ export const Navbar: React.FC = () => {
     // Observe each section
     navItemsData.forEach((item) => {
       const section = document.getElementById(item.name);
-      console.log("section", section);
       if (section) {
         observer.observe(section);
       }
@@ -78,6 +77,23 @@ export const Navbar: React.FC = () => {
       observer.disconnect();
     };
   }, [pathname]);
+
+  const [scrollPercentage, setScrollPercentage] = useState<string>("");
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percentage = (scrollY / maxScroll) * 100;
+    const finalPercentage = Math.round(percentage);
+    setScrollPercentage(finalPercentage.toString());
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="relative">
@@ -113,18 +129,23 @@ export const Navbar: React.FC = () => {
       </header>
       {/* Mobile header */}
       <header className="fixed bottom-2 left-0 w-full p-2 md:hidden">
-        <nav className="mx-5 flex items-center justify-center gap-8 rounded-full border border-indigo-400 py-2 backdrop-blur-lg dark:border-red-500">
+        <nav className="mx-5 flex items-center justify-center gap-12 overflow-hidden rounded-full border border-indigo-400 py-2 backdrop-blur-lg dark:border-red-500">
           {navItemsData.map((item) => (
             <Link key={item.link} href={item.link} className="flex items-center gap-1">
               <span
-                className={`font-bold text-indigo-600 transition-all duration-100 dark:text-yellow-400 ${
-                  activeSection == item.name.toLowerCase() ? "scale-125 text-red-600 shadow-lg" : ""
+                className={`z-40 font-bold text-black transition-all duration-100 dark:text-yellow-400 ${
+                  activeSection == item.name.toLowerCase() ? "scale-125 text-red-600" : ""
                 }`}
               >
                 {item.icon}
               </span>
             </Link>
           ))}
+          {/* background scroll */}
+          <div
+            style={{ width: `${scrollPercentage}%` }}
+            className="absolute inset-0 -z-10 h-full bg-blue-500"
+          ></div>
         </nav>
       </header>
     </div>

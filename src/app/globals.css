@@ -60,3 +60,7 @@
     --ring: 224.3 76.3% 48%;
   }
 }
+
+.svg-top {
+  mask: url("/svg/topScroll.svg") center center / contain no-repeat;
+}

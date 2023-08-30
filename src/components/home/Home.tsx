@@ -21,7 +21,7 @@ export const Home: React.FC = () => {
           alt="profile"
           className="rounded-full"
         />
-        <h1 className=" font- bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text font-alkatra text-2xl font-semibold tracking-wider text-transparent md:text-5xl">
+        <h1 className="bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text font-alkatra text-2xl font-semibold tracking-wider text-transparent md:text-5xl">
           Ali Seyedi
         </h1>
         <h2 className="font-ubuntu text-lg font-semibold text-indigo-950 dark:text-indigo-500 md:text-2xl">
