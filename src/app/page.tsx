@@ -2,7 +2,7 @@ import { About, Contact, Home, Projects, Skills } from "@/components";
 
 export default function () {
   return (
-    <main>
+    <main className="h-full">
       <Home />
       <About />
       <Skills />

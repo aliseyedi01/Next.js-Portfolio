@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={` ${ubuntu.variable} ${alkatra.variable} ${kanit.variable}`}>
+      <body className={` ${ubuntu.variable} ${alkatra.variable} ${kanit.variable} `}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}

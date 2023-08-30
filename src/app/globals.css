@@ -7,11 +7,11 @@
     @apply box-border border-border;
   }
   html {
-    @apply scroll-smooth md:snap-y md:snap-mandatory;
+    @apply scroll-smooth scrollbar scrollbar-track-background scrollbar-thumb-primary scrollbar-thumb-rounded-lg scrollbar-w-2 md:snap-y md:snap-mandatory;
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    /* font-feature-settings: "rlig" 1, "calt" 1; */
   }
 }
 
