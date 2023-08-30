@@ -50,8 +50,8 @@ const SocialMedia = () => {
           className="flex cursor-pointer items-center justify-center gap-6"
         >
           <span className={`text-2xl max-md:mt-6 md:text-3xl ${item.color}`}>{item.icon}</span>
-          <div className="max-md:hidden">
-            <p className="capitalize">{item.name}</p>
+          <div className="font-kanit max-md:hidden">
+            <p className="font-bold capitalize">{item.name}</p>
             <p>{item.value}</p>
           </div>
         </Link>

@@ -84,16 +84,16 @@ export const Navbar: React.FC = () => {
       {/* Desktop & Mobile header */}
       <header className="fixed top-0 flex h-12  w-full items-center justify-between p-2 px-4 backdrop-blur-md">
         {/* Title */}
-        <h2 className="text-sm md:text-base">Ali Seyedi</h2>
+        <h2 className="font-alkatra text-sm md:text-base">Ali Seyedi</h2>
         {/* Items */}
         <nav className="hidden translate-x-6 items-center gap-6 md:flex">
           {navItemsData.map((item) => (
             <Link
               href={item.link}
               key={item.name}
-              className={`flex items-center gap-1 capitalize hover:border-b ${
+              className={`flex items-center gap-1 font-ubuntu font-medium capitalize hover:border-b ${
                 activeSection == item.name.toLowerCase()
-                  ? "border-b border-indigo-500 text-indigo-800"
+                  ? "border-b border-indigo-500 text-indigo-800 dark:text-indigo-500"
                   : ""
               }`}
             >
@@ -102,9 +102,11 @@ export const Navbar: React.FC = () => {
           ))}
         </nav>
         {/* Change Mode */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 font-kanit">
           <Link href="/resume">
-            <Button size="sm">Resume</Button>
+            <Button size="sm" className="text-xs md:text-sm">
+              Resume
+            </Button>
           </Link>
           <ModeToggle />
         </div>

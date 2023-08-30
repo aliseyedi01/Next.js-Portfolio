@@ -60,6 +60,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        ubuntu: ["var(--font-ubuntu)"],
+        kanit: ["var(--font-kanit)"],
+        alkatra: ["var(--font-alkatra)"],
       },
       keyframes: {
         "accordion-down": {

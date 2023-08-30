@@ -81,12 +81,12 @@ const Skills: React.FC = () => {
           key={index}
           className="flex h-full w-full flex-col items-start justify-start rounded-xl p-2 hover:bg-blue-200 dark:hover:bg-blue-900"
         >
-          <h3 className="w-full border-b-2 border-indigo-700 pb-1 text-xl font-bold max-md:text-center">
+          <h3 className="w-full border-b-2 border-indigo-700 pb-1 font-ubuntu text-xl font-bold max-md:text-center">
             {category.title}
           </h3>
           <div className="grid w-full grid-flow-col grid-cols-2 grid-rows-3 place-items-start justify-center gap-1 space-y-1 p-2">
             {category.skills.map((skill, index) => (
-              <p key={index} className="flex items-center gap-2">
+              <p key={index} className="flex items-center gap-2 font-kanit">
                 <span className="text-xl text-indigo-950 dark:text-orange-500">{skill.icon}</span>
                 {skill.name}
               </p>

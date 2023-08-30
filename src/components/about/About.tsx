@@ -8,8 +8,8 @@ const About: React.FC = () => {
     >
       <img src="/svg/about.svg" alt="about" className="hidden h-[500px] w-[500px] md:block" />
       <div className="flex flex-col items-start justify-start gap-3 px-5">
-        <h2 className="text-xl font-bold text-red-950 dark:text-blue-500">Overview</h2>
-        <ul className="list-disc text-justify leading-8">
+        <h2 className="font-ubuntu text-xl font-bold ">Overview</h2>
+        <ul className="list-disc text-justify font-kanit text-xl  leading-8">
           <li>
             Hello! I'm Ali Seyedi, an enthusiastic Front-End Web Developer with a year of hands-on
             experience.

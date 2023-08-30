@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
         <ProjectCard />
         <ProjectCard />
       </div>
-      <Button className="flex items-center justify-center gap-2">
+      <Button className="flex items-center justify-center gap-2 font-ubuntu">
         <EnterIcon /> view more projects
       </Button>
     </div>

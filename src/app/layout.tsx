@@ -1,6 +1,6 @@
 // style
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Ubuntu, Kanit, Alkatra } from "next/font/google";
 // next
 import type { Metadata } from "next";
 // component
@@ -8,7 +8,21 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+const ubuntu = Ubuntu({
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
+  weight: ["300", "400", "500", "700"],
+});
+const kanit = Kanit({
+  subsets: ["latin"],
+  variable: "--font-kanit",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+const alkatra = Alkatra({
+  subsets: ["latin"],
+  variable: "--font-alkatra",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Ali Seyedi",
@@ -18,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body className={` ${ubuntu.variable} ${alkatra.variable} ${kanit.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           {children}

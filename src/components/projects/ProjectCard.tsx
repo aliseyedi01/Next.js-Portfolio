@@ -17,9 +17,9 @@ const ProjectCard: React.FC = () => {
       </Link>
       <div className="flex w-full flex-col items-center justify-center gap-3 px-6">
         {/* Title */}
-        <p className="self-center text-center font-sans font-bold">Admin Panel</p>
+        <p className="self-center text-center font-ubuntu font-bold">Admin Panel</p>
         {/* Description */}
-        <p className="w-full text-justify text-sm">
+        <p className="w-full text-justify font-kanit text-sm">
           A comprehensive admin panel for managing your application with ease.A comprehensive admin
           panel for managing your application with ease.
         </p>
@@ -34,7 +34,7 @@ const ProjectCard: React.FC = () => {
           href="project/project1"
           className="group self-end px-2 py-1 text-indigo-600 transition-all duration-200 ease-in-out dark:text-white"
         >
-          <span className="bg-gradient-to-r from-indigo-400 to-indigo-700 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] dark:from-slate-600 dark:to-slate-50">
+          <span className="bg-gradient-to-r from-indigo-400 to-indigo-700 bg-[length:0%_2px] bg-left-bottom bg-no-repeat font-alkatra transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] dark:from-slate-600 dark:to-slate-50">
             Read More
           </span>
         </Link>

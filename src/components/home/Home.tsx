@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 // component
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 export const Home: React.FC = () => {
   return (
@@ -20,15 +21,19 @@ export const Home: React.FC = () => {
           alt="profile"
           className="rounded-full"
         />
-        <h1 className=" bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text text-2xl font-bold tracking-wider text-transparent md:text-5xl">
+        <h1 className=" font- bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text font-alkatra text-2xl font-semibold tracking-wider text-transparent md:text-5xl">
           Ali Seyedi
         </h1>
-        <h2 className="font-mono text-lg font-semibold text-indigo-950 dark:text-indigo-500 md:text-2xl">
+        <h2 className="font-ubuntu text-lg font-semibold text-indigo-950 dark:text-indigo-500 md:text-2xl">
           Front-End Web Developer
         </h2>
-        <div className="flex gap-3 self-end">
-          <Button>Project</Button>
-          <Button variant="destructive">Contact</Button>
+        <div className="flex gap-3 self-end font-kanit font-bold">
+          <Link href="#projects">
+            <Button>Project</Button>
+          </Link>
+          <Link href="#contact">
+            <Button variant="destructive">Contact</Button>
+          </Link>
         </div>
       </div>
       {/* svg */}
