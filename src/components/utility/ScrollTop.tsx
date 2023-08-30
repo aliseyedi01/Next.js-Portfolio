@@ -1,26 +1,11 @@
 "use client";
+import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 // react
 import React, { useState, useEffect } from "react";
 
 const ScrollTop: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [scrollPercentage, setScrollPercentage] = useState<string>("");
-
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 200);
-    const scrollY = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const percentage = (scrollY / maxScroll) * 100;
-    const finalPercentage = 100 - Math.round(percentage);
-    setScrollPercentage(finalPercentage.toString());
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const scrollPercentage = useScrollPercentage();
 
   const handleClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });

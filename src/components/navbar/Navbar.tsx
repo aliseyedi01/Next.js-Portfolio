@@ -14,6 +14,7 @@ import Link from "next/link";
 import { ModeToggle } from "../theme/ModeToggle";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
+import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 // types
 interface NavItem {
   name: string;
@@ -50,6 +51,8 @@ const navItemsData: NavItem[] = [
 ];
 
 export const Navbar: React.FC = () => {
+  const scrollPercentage = useScrollPercentage();
+  const inverseScrollPercentage = 100 - scrollPercentage;
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const pathname = usePathname();
 
@@ -77,23 +80,6 @@ export const Navbar: React.FC = () => {
       observer.disconnect();
     };
   }, [pathname]);
-
-  const [scrollPercentage, setScrollPercentage] = useState<string>("");
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    const percentage = (scrollY / maxScroll) * 100;
-    const finalPercentage = Math.round(percentage);
-    setScrollPercentage(finalPercentage.toString());
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="relative">
@@ -143,7 +129,7 @@ export const Navbar: React.FC = () => {
           ))}
           {/* background scroll */}
           <div
-            style={{ width: `${scrollPercentage}%` }}
+            style={{ width: `${inverseScrollPercentage}%` }}
             className="absolute inset-0 -z-10 h-full bg-blue-500"
           ></div>
         </nav>
