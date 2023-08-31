@@ -85,7 +85,7 @@ const config: Config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        disco: "disco 3.5s linear infinite",
+        disco: "disco 5.5s linear infinite",
       },
       backgroundImage: {
         "gradient-conic": "conic-gradient(var(--tw-gradient-stops))",

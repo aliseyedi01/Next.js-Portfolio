@@ -121,7 +121,7 @@ export const Navbar: React.FC = () => {
         </div>
       </header>
       {/* Mobile header */}
-      <header className="fixed bottom-2 left-0 w-full p-2 md:hidden">
+      <header className="fixed bottom-2  left-0 z-50 w-full p-2 md:hidden">
         <nav className="mx-5 flex items-center justify-center gap-12 overflow-hidden rounded-full border border-indigo-400 py-2 backdrop-blur-lg dark:border-red-500">
           {navItemsData.map((item) => (
             <Link key={item.link} href={item.link} className="flex items-center gap-1">
