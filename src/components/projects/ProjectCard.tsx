@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ProjectCard: React.FC = () => {
   return (
-    <div className="flex h-[22rem] w-full flex-col items-center justify-around rounded-lg border border-indigo-950 hover:shadow-lg hover:shadow-violet-200 dark:border-indigo-500 md:w-[23%]">
+    <div className="flex h-[22rem] w-full flex-col items-center justify-around rounded-lg border border-indigo-950/30 hover:border-indigo-950 hover:shadow-md hover:shadow-sky-400 dark:border-indigo-500 md:w-[23%]">
       {/* Cover Project */}
       <Link href="project/project1">
         <Image
@@ -12,7 +12,7 @@ const ProjectCard: React.FC = () => {
           width="300"
           height="400"
           alt="singleProject"
-          className="rounded-lg"
+          className="rounded-lg shadow-md"
         />
       </Link>
       <div className="flex w-full flex-col items-center justify-center gap-3 px-6">
@@ -23,13 +23,6 @@ const ProjectCard: React.FC = () => {
           A comprehensive admin panel for managing your application with ease.A comprehensive admin
           panel for managing your application with ease.
         </p>
-        {/* Read more link */}
-        {/* <Link
-          href="project/project1"
-          className="self-end px-2 py-1 hover:underline hover:underline-offset-2"
-        >
-          Read more
-        </Link> */}
         <Link
           href="project/project1"
           className="group self-end px-2 py-1 text-indigo-600 transition-all duration-200 ease-in-out dark:text-white"
