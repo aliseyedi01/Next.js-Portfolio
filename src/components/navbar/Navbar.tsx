@@ -53,6 +53,7 @@ const navItemsData: NavItem[] = [
 export const Navbar: React.FC = () => {
   const scrollPercentage = useScrollPercentage();
   const inverseScrollPercentage = 100 - scrollPercentage;
+  const shadowHeader = Number(scrollPercentage) < 80;
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const pathname = usePathname();
 
@@ -84,7 +85,11 @@ export const Navbar: React.FC = () => {
   return (
     <div className="relative">
       {/* Desktop & Mobile header */}
-      <header className="fixed top-0 flex h-12  w-full items-center justify-between p-2 px-4 backdrop-blur-md">
+      <header
+        className={`fixed top-0 flex h-14 w-full items-center justify-between p-2 px-4  shadow-blue-100 backdrop-blur-md ${
+          shadowHeader ? "shadow-[0_0_20px_5px_rgba(0,0,0,0.2)]" : ""
+        } `}
+      >
         {/* Title */}
         <h2 className="font-alkatra text-sm md:text-base">Ali Seyedi</h2>
         {/* Items */}
