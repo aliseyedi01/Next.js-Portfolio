@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
+import { BackPage } from "..";
 
 const Resume: React.FC = () => {
   const pathPdf =
@@ -10,10 +11,11 @@ const Resume: React.FC = () => {
   return (
     <div
       id="resume"
-      className="flex h-full w-full flex-col items-center justify-center gap-2 px-6 pb-14 pt-12   md:pb-5 md:pt-14"
+      className="relative flex h-full w-full flex-col items-center justify-center gap-2 px-6 pb-14 pt-20 md:pb-5 md:pt-14"
     >
+      <BackPage className="absolute left-6 top-12 " />
       <Link href={pathPdf}>
-        <Button className="text-sm md:text-base">Download CV</Button>
+        <Button className="font-alkatra text-sm text-white">Download CV</Button>
       </Link>
       <div className="h-full w-[98%] md:w-[80%]">
         <object
