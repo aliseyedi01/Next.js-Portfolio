@@ -14,22 +14,22 @@ const Actions = [
   {
     name: "Github",
     icon: <FaGithub className="text-indigo-950 dark:text-indigo-400 " />,
-    link: "/project/project/project",
+    link: "/project",
   },
   {
     name: "Codesandbox",
     icon: <FiCodesandbox className="text-slate-950 dark:text-slate-50" />,
-    link: "/project/project",
+    link: "/project",
   },
   {
     name: "Github1s",
     icon: <FaGithubAlt className="text-indigo-600 dark:text-indigo-200" />,
-    link: "/project/project/project",
+    link: "/project",
   },
   {
     name: "Online",
     icon: <FaLaptopCode className="text-red-800 dark:text-red-400" />,
-    link: "/project/project/project",
+    link: "/project",
   },
 ];
 
@@ -39,7 +39,7 @@ const ProjectCard: React.FC = () => {
       <div className="relative flex h-[370px] w-[350px] flex-col items-center justify-around gap-2 overflow-hidden rounded-md bg-blue-400 pb-2  dark:bg-blue-800 md:w-[350px] ">
         <div className="peer absolute inset-1 z-10 cursor-pointer rounded-lg bg-background">
           {/* Cover Project  */}
-          <Link href="project/project1">
+          <Link href="project">
             <Image
               src="/image/projects/project1.png"
               width="300"

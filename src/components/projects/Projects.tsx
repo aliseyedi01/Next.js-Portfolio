@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard";
 import { Button } from "../ui/button";
 // icon
 import { EnterIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 const Projects: React.FC = () => {
   return (
@@ -17,9 +18,11 @@ const Projects: React.FC = () => {
         <ProjectCard />
         <ProjectCard />
       </div>
-      <Button className="flex items-center justify-center gap-2 font-ubuntu">
-        <EnterIcon /> view more projects
-      </Button>
+      <Link href="/projects">
+        <Button className="flex items-center justify-center gap-2 font-ubuntu">
+          <EnterIcon /> view more projects
+        </Button>
+      </Link>
     </div>
   );
 };
