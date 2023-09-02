@@ -37,9 +37,9 @@ const ProjectCard: React.FC = () => {
   return (
     <>
       <div className="relative flex h-[370px] w-[350px] flex-col items-center justify-around gap-2 overflow-hidden rounded-md bg-blue-400 pb-2  dark:bg-blue-800 md:w-[350px] ">
-        <div className="peer absolute inset-1 z-10 cursor-pointer rounded-lg bg-background">
+        <div className="peer absolute inset-1 z-10 rounded-lg bg-background">
           {/* Cover Project  */}
-          <Link href="project">
+          <Link href="project/1">
             <Image
               src="/image/projects/project1.png"
               width="300"
