@@ -79,7 +79,7 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-  @apply !text-blue-600 dark:!text-yellow-600;
+  @apply !w-12 !text-blue-600 dark:!text-yellow-600;
 }
 
 .swiper-pagination-bullet {
