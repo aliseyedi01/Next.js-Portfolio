@@ -15,6 +15,7 @@ import { ModeToggle } from "../theme/ModeToggle";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { useScrollPercentage } from "@/hooks/useScrollPercentage";
+import { LanguageSwitcher } from "..";
 // types
 interface NavItem {
   name: string;
@@ -93,7 +94,7 @@ export const Navbar: React.FC = () => {
         } `}
       >
         {/* Title */}
-        <h2 className="font-alkatra text-sm md:text-base">Ali Seyedi</h2>
+        <h2 className="font-alkatra text-base md:text-lg">Ali Seyedi</h2>
         {/* Items */}
         <nav className="hidden translate-x-6 items-center gap-6 md:flex">
           {navItemsData.map((item) => (
@@ -110,13 +111,20 @@ export const Navbar: React.FC = () => {
             </Link>
           ))}
         </nav>
-        {/* Change Mode */}
-        <div className="flex items-center gap-4 font-kanit">
+        {/* Buttons */}
+        <div className="flex items-center gap-2 font-kanit">
+          {/* Resume */}
           <Link href="/resume">
-            <Button size="sm" className="text-xs md:text-sm">
-              Resume
+            <Button
+              size="icon"
+              className="rounded-full bg-blue-600 text-xs text-white  md:text-base"
+            >
+              CV
             </Button>
           </Link>
+          {/* Bilingual */}
+          <LanguageSwitcher />
+          {/* DarkMode */}
           <ModeToggle />
         </div>
       </header>
