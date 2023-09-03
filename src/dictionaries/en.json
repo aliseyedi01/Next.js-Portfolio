@@ -1,0 +1,31 @@
+{
+  "header": {
+    "name": "Ali Seyedi",
+    "home": "Home",
+    "about": "About",
+    "Skills": "Skills",
+    "Project": "Project",
+    "contact": "Contact"
+  },
+  "home": {
+    "name": "Ali Seyedi",
+    "task": "Front-End Web Developer",
+    "project": "Project",
+    "contact": "contact"
+  },
+  "about": {
+    "title": "About",
+    "description": {
+      "p1": "Hello! I'm Ali Seyedi, an enthusiastic Front-End Web Developer with a year of hands-on experience.",
+      "p2": "My journey in this dynamic field has been driven by a relentless passion for learning. Through a combination of self-study, leveraging online resources like YouTube tutorials and diving deep into documentation, I've honed my skills in crafting interactive and responsive user interfaces.",
+      "p3": "I'm proud to have actively contributed to open-source projects on GitHub, where I trace code and collaborate with the community to expand my knowledge and skill set.",
+      "p4": "With a keen eye for design and the ability to turn ideas into captivating digital experiences, I'm dedicated to creating pixel-perfect websites that leave a lasting impact. Let's collaborate and bring your digital visions to life!"
+    }
+  },
+  "contact": {
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram"
+  }
+}

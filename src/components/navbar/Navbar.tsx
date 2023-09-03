@@ -16,47 +16,48 @@ import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 import { LanguageSwitcher } from "..";
+import { Locale } from "@/lib/i18n.config";
 // types
 interface NavItem {
-  name: string;
+  name: any;
   link: string;
   icon: React.ReactNode;
 }
 
-const navItemsData: NavItem[] = [
-  {
-    name: "home",
-    link: "/#home",
-    icon: <HomeIcon />,
-  },
-  {
-    name: "about",
-    link: "/#about",
-    icon: <InfoCircledIcon />,
-  },
-  {
-    name: "skills",
-    link: "/#skills",
-    icon: <RocketIcon />,
-  },
-  {
-    name: "projects",
-    link: "/#projects",
-    icon: <LaptopIcon />,
-  },
-  {
-    name: "contact",
-    link: "/#contact",
-    icon: <ChatBubbleIcon />,
-  },
-];
-
-export const Navbar: React.FC = () => {
+export default function Navbar({ lang }: { lang: Locale }) {
   const scrollPercentage = useScrollPercentage();
   const inverseScrollPercentage = 100 - scrollPercentage;
   const shadowHeader = Number(scrollPercentage) < 80;
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const pathname = usePathname();
+
+  const navItemsData: NavItem[] = [
+    {
+      name: "home",
+      link: "/#home",
+      icon: <HomeIcon />,
+    },
+    {
+      name: "about",
+      link: "/#about",
+      icon: <InfoCircledIcon />,
+    },
+    {
+      name: "skills",
+      link: "/#skills",
+      icon: <RocketIcon />,
+    },
+    {
+      name: "projects",
+      link: "/#projects",
+      icon: <LaptopIcon />,
+    },
+    {
+      name: "contact",
+      link: "/#contact",
+      icon: <ChatBubbleIcon />,
+    },
+  ];
 
   useEffect(() => {
     // Callback function when an observed section comes into view
@@ -95,11 +96,13 @@ export const Navbar: React.FC = () => {
       >
         {/* Title */}
         <h2 className="font-alkatra text-base md:text-lg">Ali Seyedi</h2>
+        {/* <h2 className="font-alkatra text-base md:text-lg">{header.name}</h2> */}
+
         {/* Items */}
         <nav className="hidden translate-x-6 items-center gap-6 md:flex">
           {navItemsData.map((item) => (
             <Link
-              href={item.link}
+              href={`/${lang}${item.link}`}
               key={item.name}
               className={`flex items-center gap-1 font-ubuntu font-medium capitalize hover:border-b ${
                 activeSection == item.name.toLowerCase()
@@ -151,4 +154,4 @@ export const Navbar: React.FC = () => {
       </header>
     </div>
   );
-};
+}

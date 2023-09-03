@@ -5,8 +5,12 @@ import Image from "next/image";
 // component
 import { Button } from "../ui/button";
 import Link from "next/link";
+// i18n
+import { Locale } from "@/lib/i18n.config";
+import { getDictionary } from "@/lib/dictionary";
 
-export const Home: React.FC = () => {
+const Home: React.FC<{ lang: Locale }> = async ({ lang }) => {
+  const { home } = await getDictionary(lang);
   return (
     <div
       id="home"
@@ -21,18 +25,18 @@ export const Home: React.FC = () => {
           alt="profile"
           className="rounded-full"
         />
-        <h1 className="bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text font-alkatra text-2xl font-semibold tracking-wider text-transparent md:text-5xl">
-          Ali Seyedi
+        <h1 className="bg-gradient-to-r from-indigo-700 to-green-500 bg-clip-text font-alkatra text-2xl font-semibold tracking-wider text-transparent  md:text-5xl">
+          {home.name}
         </h1>
         <h2 className="font-ubuntu text-lg font-semibold text-indigo-950 dark:text-indigo-500 md:text-2xl">
-          Front-End Web Developer
+          {home.task}
         </h2>
         <div className="flex gap-3 self-end font-kanit font-bold">
           <Link href="#projects">
-            <Button>Project</Button>
+            <Button> {home.project}</Button>
           </Link>
           <Link href="#contact">
-            <Button variant="destructive">Contact</Button>
+            <Button variant="destructive">{home.contact}</Button>
           </Link>
         </div>
       </div>
