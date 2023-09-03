@@ -8,7 +8,7 @@ export default async function ({ params }: { params: { lang: Locale } }) {
     <main className="h-full">
       <Home lang={params.lang} />
       <About lang={params.lang} />
-      <Skills />
+      <Skills lang={params.lang} />
       <Projects />
       <Contact lang={params.lang} />
     </main>

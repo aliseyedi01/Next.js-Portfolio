@@ -27,5 +27,12 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "telegram": "Telegram"
+  },
+  "skill": {
+    "language": "Language",
+    "library": "Library & Frameworks",
+    "style": "Style",
+    "component": "Component Libraries",
+    "tool": "Tools"
   }
 }

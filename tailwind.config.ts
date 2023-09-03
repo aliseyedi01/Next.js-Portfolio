@@ -63,6 +63,9 @@ const config: Config = {
         ubuntu: ["var(--font-ubuntu)"],
         kanit: ["var(--font-kanit)"],
         alkatra: ["var(--font-alkatra)"],
+        vazir: ["var(--font-vazir)"],
+        lalezar: ["var(--font-lalezar)"],
+        iranSans: ["var(--font-iranSans)"],
       },
       keyframes: {
         "accordion-down": {

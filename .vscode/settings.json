@@ -6,6 +6,7 @@
     "PSPDF",
     "Seyedi",
     "Supabase",
+    "Vazirmatn",
     "aboutme",
     "adminpanel",
     "aliseyedi",
@@ -13,7 +14,9 @@
     "clsx",
     "formatjs",
     "hookform",
+    "iransans",
     "kanit",
+    "lalezar",
     "lilita",
     "localematcher",
     "lucide",
@@ -24,6 +27,7 @@
     "shadcn",
     "svgr",
     "swiper",
-    "tailwindcss"
+    "tailwindcss",
+    "vazir"
   ]
 }
