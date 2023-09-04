@@ -10,7 +10,7 @@ export default async function ({ params }: { params: { lang: Locale } }) {
       <Home lang={params.lang} />
       <About lang={params.lang} />
       <Skills lang={params.lang} />
-      <Projects />
+      <Projects lang={params.lang} />
       <Contact lang={params.lang} />
       <NavItemMobile lang={params.lang} />
     </main>

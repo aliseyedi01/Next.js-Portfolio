@@ -34,5 +34,19 @@
     "style": "Style",
     "component": "Component Libraries",
     "tool": "Tools"
+  },
+  "ProjectData": {
+    "title": "Title",
+    "link": "Link",
+    "language": "Language",
+    "Technologies": "Technologies",
+    "description": "Description"
+  },
+  "Project": {
+    "allProjects": "See More Projects",
+    "all": "All Projects"
+  },
+  "ProjectCards": {
+    "details": "Details"
   }
 }

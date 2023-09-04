@@ -9,6 +9,9 @@ import { FaGithub, FaGithubAlt, FaLaptopCode } from "react-icons/fa";
 // component
 import { Badge } from "../ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+// i18n
+import { Locale } from "@/lib/i18n.config";
+import { getDictionary } from "@/lib/dictionary";
 
 const Actions = [
   {
@@ -33,13 +36,15 @@ const Actions = [
   },
 ];
 
-const ProjectCard: React.FC = () => {
+// const ProjectCard: React.FC = () => {
+const ProjectCard: React.FC<{ lang: Locale }> = async ({ lang }) => {
+  const { ProjectCards } = await getDictionary(lang);
   return (
     <>
-      <div className="relative flex h-[370px] w-[350px] flex-col items-center justify-around gap-2 overflow-hidden rounded-md bg-blue-400 pb-2  dark:bg-blue-800 md:w-[350px] ">
+      <div className="relative flex h-[380px] w-[350px] flex-col items-center justify-around gap-2 overflow-hidden rounded-md bg-blue-400 pb-2  dark:bg-blue-800 md:w-[350px] ">
         <div className="peer absolute inset-1 z-10 rounded-lg bg-background">
           {/* Cover Project  */}
-          <Link href="project/1">
+          <Link href={`/${lang}/project/1`}>
             <Image
               src="/image/projects/project1.png"
               width="300"
@@ -84,11 +89,11 @@ const ProjectCard: React.FC = () => {
               {/* Details */}
               <div className="">
                 <Link
-                  href="project/project1"
+                  href={`/${lang}/project/1`}
                   className="group self-end px-2 py-1 text-indigo-600 transition-all duration-200 ease-in-out dark:text-white"
                 >
-                  <span className="bg-gradient-to-r from-indigo-400 to-indigo-700 bg-[length:0%_2px] bg-left-bottom bg-no-repeat font-alkatra transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] dark:from-slate-600 dark:to-slate-50">
-                    Details
+                  <span className="bg-gradient-to-r from-indigo-400 to-indigo-700 bg-[length:0%_2px] bg-left-bottom bg-no-repeat font-alkatra transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] rtl:font-iranSans dark:from-slate-600 dark:to-slate-50">
+                    {ProjectCards.details}
                   </span>
                 </Link>
               </div>

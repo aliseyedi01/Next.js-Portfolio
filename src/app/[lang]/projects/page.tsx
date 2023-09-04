@@ -1,23 +1,9 @@
-import { BackPage } from "@/components";
+import { BackPage, ProjectAll } from "@/components";
 import ProjectCard from "@/components/projects/ProjectCard";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/lib/i18n.config";
 import type { Metadata } from "next";
 
-export default function () {
-  return (
-    <div className="flex h-full w-full flex-col  gap-6 pt-16">
-      <div className="flex items-center gap-2 pl-5">
-        <BackPage />
-        <p className="font-ubuntu text-2xl font-bold">All Projects</p>
-      </div>
-      <div className="grid w-full grid-cols-1 place-items-center  gap-12 md:grid-cols-3">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-      </div>
-    </div>
-  );
+export default function ({ params }: { params: { lang: Locale } }) {
+  return <ProjectAll lang={params.lang} />;
 }

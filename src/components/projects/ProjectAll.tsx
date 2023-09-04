@@ -1,0 +1,30 @@
+import { BackPage } from "@/components";
+import ProjectCard from "@/components/projects/ProjectCard";
+import { getDictionary } from "@/lib/dictionary";
+import { Locale } from "@/lib/i18n.config";
+
+// const ProjectCard: React.FC = () => {
+const ProjectAll: React.FC<{ lang: Locale }> = async ({ lang }) => {
+  const { Project } = await getDictionary(lang);
+  return (
+    <>
+      <div className="flex h-full w-full flex-col  gap-6 pt-16">
+        <div className="flex items-center gap-2 pl-5">
+          <BackPage />
+          <p className="font-ubuntu text-xl font-bold rtl:font-iranSans ">{Project.all}</p>
+        </div>
+        <div className="grid w-full grid-cols-1 place-items-center  gap-12 md:grid-cols-3">
+          <ProjectCard lang={lang} />
+          <ProjectCard lang={lang} />
+          <ProjectCard lang={lang} />
+          <ProjectCard lang={lang} />
+          <ProjectCard lang={lang} />
+          <ProjectCard lang={lang} />
+          <ProjectCard lang={lang} />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default ProjectAll;

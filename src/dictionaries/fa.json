@@ -34,5 +34,19 @@
     "style": "استایل",
     "component": "کتابخانه‌های کامپوننت",
     "tool": "ابزارها"
+  },
+  "ProjectData": {
+    "title": "عنوان",
+    "link": "لینک",
+    "language": "زبان",
+    "Technologies": "تکنولوژی",
+    "description": "توضیحات"
+  },
+  "Project": {
+    "allProjects": "دیدن پروژه بیشتر",
+    "all": "همه پروژه ها"
+  },
+  "ProjectCards": {
+    "details": "جزئیات"
   }
 }
