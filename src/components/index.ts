@@ -6,4 +6,6 @@ export { default as Resume } from "./resume/Resume";
 export { default as Contact } from "./contact/Contact";
 export { default as ScrollTop } from "./utility/ScrollTop";
 export { default as BackPage } from "./utility/BackPage";
+export { default as NavItemMobile } from "./navbar/NavItemMobile";
+export { default as NavbarDesktop } from "./navbar/NavbarDesktop";
 export { default as LanguageSwitcher } from "./navbar/LanguageSwitcher";

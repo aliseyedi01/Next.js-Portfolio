@@ -1,4 +1,5 @@
-import { About, Contact, Home, Projects, Skills } from "@/components";
+import { About, Contact, Home, NavItemMobile, Projects, Skills } from "@/components";
+
 // i18n
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n.config";
@@ -11,6 +12,7 @@ export default async function ({ params }: { params: { lang: Locale } }) {
       <Skills lang={params.lang} />
       <Projects />
       <Contact lang={params.lang} />
+      <NavItemMobile lang={params.lang} />
     </main>
   );
 }

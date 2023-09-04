@@ -6,12 +6,12 @@ import type { Metadata } from "next";
 // component
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
-import { ScrollTop } from "@/components";
-import Navbar from "@/components/navbar/Navbar";
-// i18n
+import { NavbarDesktop, ScrollTop } from "@/components";
+import Navbar from "@/components/navbar/Navbar"; // i18n
 import { Locale } from "@/lib/i18n.config";
 // Fonts
 import localFont from "next/font/local";
+import Navbar1 from "@/components/navbar/Navbar1";
 const iranSans = localFont({
   src: [
     {
@@ -70,8 +70,9 @@ export default function RootLayout({
         className={` ${ubuntu.variable} ${alkatra.variable} ${kanit.variable} ${vazir.variable} ${lalezar.variable} ${iranSans.variable}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {/* <Header lang={params.lang} /> */}
-          <Navbar lang={params.lang} />
+          <NavbarDesktop>
+            <Navbar1 lang={params.lang} />
+          </NavbarDesktop>
           {children}
           <ScrollTop />
           <Toaster />
