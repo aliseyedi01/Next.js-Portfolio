@@ -17,7 +17,7 @@ const ScrollTop: React.FC = () => {
 
   return (
     <div
-      className={`fixed bottom-4 right-4 h-12 w-12 cursor-pointer overflow-hidden rounded-full border border-blue-600 bg-blue-600 ${
+      className={`fixed bottom-4 right-4 h-12 w-12  cursor-pointer overflow-hidden rounded-full border border-blue-600 bg-blue-600 ${
         showTopButton ? "hidden md:block" : "hidden"
       } `}
     >

@@ -6,20 +6,33 @@ import { Button } from "../ui/button";
 // next
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useParams } from "next/navigation";
+
 // image
 import FA from "@assets/image/flag/fa.jpg";
 import UK from "@assets/image/flag/uk.jpg";
 
 export default function LanguageSwitcher() {
   const pathName = usePathname();
+  // console.log("path", pathName);
+
   const [currentImage, setCurrentImage] = useState(UK);
   const [currentPath, setCurrentPath] = useState(pathName);
+  const [hash, setHash] = useState("");
+  const params = useParams();
 
   useEffect(() => {
-    setCurrentImage(pathName === "/en" ? UK : FA);
-    setCurrentPath(pathName === "/en" ? "/fa" : "/en");
-  }, [pathName]);
+    // console.log("Hash:", window.location.hash);
+    setHash(window.location.hash);
+  }, [params]);
+
+  useEffect(() => {
+    const newPath = pathName.includes("/en")
+      ? pathName.replace("/en", "/fa")
+      : pathName.replace("/fa", "/en");
+    setCurrentImage(pathName.includes("/en") ? UK : FA);
+    setCurrentPath(newPath + hash);
+  }, [pathName, params]);
 
   return (
     <Link href={currentPath}>
