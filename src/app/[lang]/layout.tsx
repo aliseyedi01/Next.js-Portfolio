@@ -7,11 +7,12 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import { NavbarDesktop, ScrollTop } from "@/components";
-import Navbar from "@/components/navbar/Navbar"; // i18n
+import ProgressProvider from "@/components/utility/ProgressProvider";
 import { Locale } from "@/lib/i18n.config";
+import Navbar1 from "@/components/navbar/Navbar1";
 // Fonts
 import localFont from "next/font/local";
-import Navbar1 from "@/components/navbar/Navbar1";
+
 const iranSans = localFont({
   src: [
     {
@@ -73,7 +74,7 @@ export default function RootLayout({
           <NavbarDesktop>
             <Navbar1 lang={params.lang} />
           </NavbarDesktop>
-          {children}
+          <ProgressProvider>{children}</ProgressProvider>
           <ScrollTop />
           <Toaster />
         </ThemeProvider>
