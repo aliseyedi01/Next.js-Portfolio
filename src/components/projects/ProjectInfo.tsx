@@ -19,49 +19,58 @@ import { FaGithub, FaGithubAlt, FaLaptopCode } from "react-icons/fa";
 import Link from "next/link";
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+import { ProjectDataType, projectsData } from "@/data/projectData";
 
-const Actions = [
-  {
-    name: "Github",
-    icon: <FaGithub className="text-xl text-indigo-950 dark:text-indigo-400 " />,
-    link: "/project",
-  },
-  {
-    name: "Codesandbox",
-    icon: <FiCodesandbox className="text-xl text-slate-950 dark:text-slate-50" />,
-    link: "/project",
-  },
-  {
-    name: "Github1s",
-    icon: <FaGithubAlt className="text-xl text-indigo-600 dark:text-indigo-200" />,
-    link: "/project",
-  },
-  {
-    name: "Online",
-    icon: <FaLaptopCode className="text-xl text-red-800 dark:text-red-400" />,
-    link: "/project",
-  },
-];
+type Props = {
+  lang: Locale;
+  Data: ProjectDataType;
+};
 
-const ProjectInfo: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
   const { ProjectData } = await getDictionary(lang);
+
+  const { title, description, stacks, links, languages } = Data[lang];
+
+  const Actions = [
+    {
+      name: "Github",
+      icon: <FaGithub className="text-indigo-950 dark:text-indigo-400" />,
+      link: `${links.github}`,
+    },
+    {
+      name: "Codesandbox",
+      icon: <FiCodesandbox className="text-slate-950 dark:text-slate-50" />,
+      link: `${links.codeSandBox}`,
+    },
+    {
+      name: "Github1s",
+      icon: <FaGithubAlt className="text-indigo-600 dark:text-indigo-200" />,
+      link: `${links.github1s}`,
+    },
+    {
+      name: "Online",
+      icon: <FaLaptopCode className="text-red-800 dark:text-red-400" />,
+      link: `${links.online}`,
+    },
+  ];
+
   return (
     <div className="md:x-2 flex h-full w-full flex-col gap-4 px-6 md:gap-8">
       {/* Title */}
       <div className="space-y-3">
-        <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
+        <h2 className="font-ubuntu text-xl font-bold text-primary  rtl:font-vazir">
           {ProjectData.title}
         </h2>
-        <p className=" font-kanit text-lg ">Admin Panel</p>
+        <p className=" font-kanit text-lg rtl:font-vazir ">{title}</p>
       </div>
       {/* Links */}
       <div className="space-y-3">
         <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
           {ProjectData.link}
         </h2>
-        <p className=" flex items-center gap-2 font-kanit">
+        <p className=" flex items-center gap-2 pt-1 font-kanit text-xl">
           {Actions.map((action, index) => (
-            <Link href={action.link} key={index}>
+            <Link href={action.link} key={index} target="_blank">
               <TooltipProvider delayDuration={100}>
                 <Tooltip>
                   <TooltipTrigger>{action.icon}</TooltipTrigger>
@@ -75,36 +84,37 @@ const ProjectInfo: React.FC<{ lang: Locale }> = async ({ lang }) => {
         </p>
       </div>
       {/* Language */}
-      <div className="space-y-3">
+      <div className="space-y-4">
         <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
           {ProjectData.language}
         </h2>
-        <p className="flex items-center gap-2 font-kanit text-lg">
-          <Badge variant="destructive">JavaScript</Badge>
-          <Badge variant="default">TypeScript</Badge>
+        <p className="flex items-center gap-2 font-kanit text-lg rtl:font-vazir">
+          {languages.map((language, index) => (
+            <Badge variant="outline" key={index}>
+              {language}
+            </Badge>
+          ))}
         </p>
       </div>
       {/* Technology */}
-      <div className="space-y-3">
+      <div className="space-y-5">
         <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
           {ProjectData.Technologies}
         </h2>
         <p className=" flex items-center gap-2 font-kanit">
-          <Badge variant="outline">React.js</Badge>
-          <Badge variant="outline">Next.js</Badge>
-          <Badge variant="outline">TypeScript</Badge>
-          <Badge variant="outline">Tailwind</Badge>
+          {stacks.map((stack, index) => (
+            <Badge variant="outline" key={index}>
+              {stack}
+            </Badge>
+          ))}
         </p>
       </div>
       {/* Description */}
-      <div className="space-y-1">
+      <div className="space-y-3">
         <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
           {ProjectData.description}
         </h2>
-        <p className="text-left font-kanit text-lg">
-          A comprehensive admin panel for managing your application with ease. A comprehensive admin
-          panel for managing your application with ease.
-        </p>
+        <p className="text-justify font-kanit text-lg  rtl:font-iranSans">{description}</p>
       </div>
     </div>
   );

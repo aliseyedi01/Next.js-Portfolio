@@ -9,18 +9,21 @@ import Link from "next/link";
 // i18n
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+import { projectsData } from "@/data/projectData";
 
 const Projects: React.FC<{ lang: Locale }> = async ({ lang }) => {
   const { Project } = await getDictionary(lang);
+  const projectsDataShow = projectsData.slice(0, 3);
+
   return (
     <div
       id="projects"
       className="flex h-fit w-full snap-center flex-col items-center justify-center gap-8 p-4 pt-14 md:h-screen"
     >
       <div className="flex flex-wrap items-center justify-center gap-12">
-        <ProjectCard lang={lang} />
-        <ProjectCard lang={lang} />
-        <ProjectCard lang={lang} />
+        {projectsDataShow.map((project, index) => (
+          <ProjectCard lang={lang} Data={project} key={index} />
+        ))}
       </div>
       <Link href={`/${lang}/projects`}>
         <Button className="flex items-center justify-center gap-2 font-ubuntu rtl:font-iranSans">

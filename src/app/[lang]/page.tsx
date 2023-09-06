@@ -4,7 +4,7 @@ import { About, Contact, Home, NavItemMobile, Projects, Skills } from "@/compone
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n.config";
 
-export default async function ({ params }: { params: { lang: Locale } }) {
+const Page = ({ params }: { params: { lang: Locale } }) => {
   return (
     <main className="h-full">
       <Home lang={params.lang} />
@@ -15,4 +15,6 @@ export default async function ({ params }: { params: { lang: Locale } }) {
       <NavItemMobile lang={params.lang} />
     </main>
   );
-}
+};
+
+export default Page;

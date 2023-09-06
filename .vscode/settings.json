@@ -1,5 +1,6 @@
 {
   "cSpell.ignoreWords": [
+    "Antd",
     "Antdesign",
     "Codesandbox",
     "Nextdotjs",
@@ -29,5 +30,7 @@
     "swiper",
     "tailwindcss",
     "vazir"
-  ]
+  ],
+  "search.useIgnoreFiles": true,
+  "search.useGlobalIgnoreFiles": false
 }
