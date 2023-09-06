@@ -21,78 +21,125 @@ import { Textarea } from "@/components/ui/textarea";
 import { PersonIcon, EnvelopeClosedIcon, TextAlignJustifyIcon } from "@radix-ui/react-icons";
 import { Locale } from "@/lib/i18n.config";
 
-const FormSchema = z.object({
-  username: z
-    .string({
-      required_error: "Please enter a username",
-    })
-    .min(2, {
-      message: "Username must be at least 2 characters.",
-    })
-    .max(16, {
-      message: "Username must not be longer than 16 characters.",
-    }),
-  email: z
-    .string({
-      required_error: "Please enter a username",
-    })
-    .min(2, {
-      message: "Email must be at least 2 characters.",
-    })
-    .refine(
-      (value) => /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(value),
-      "Invalid email address",
-    ),
-
-  message: z
-    .string({
-      required_error: "Please enter a message",
-    })
-    .min(10, {
-      message: "Message must be at least 10 characters.",
-    })
-    .max(150, {
-      message: "Message must not be longer than 150 characters.",
-    }),
-});
-
 const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {
+  const dataForm = {
+    username: {
+      form: {
+        en: "Name",
+        fa: "نام",
+      },
+      require: {
+        en: "Please enter a username",
+        fa: "لطفا یک نام را وارد نمایید",
+      },
+      min: {
+        en: "Username must be at least 2 characters.",
+        fa: "نام  باید حداقل 2 کاراکتر باشد",
+      },
+      max: {
+        en: "Username must not be longer than 16 characters.",
+        fa: "نام  نباید بیشتر از 16 کاراکتر باشد",
+      },
+    },
+
+    email: {
+      form: {
+        en: "Email",
+        fa: "ایمیل",
+      },
+      require: {
+        en: "Please enter a Email",
+        fa: "لطفا یک ایمیل را وارد نمایید",
+      },
+      refine: {
+        en: "Invalid email address",
+        fa: "ایمیل نامعتبر است",
+      },
+    },
+    message: {
+      form: {
+        en: "Message",
+        fa: "پیام",
+      },
+      require: {
+        en: "Please enter a message",
+        fa: "لطفا یک پیام وارد نمایید",
+      },
+      min: {
+        en: "Message must be at least 10 characters.",
+        fa: "پیام باید حداقل 10 کاراکتر باشد",
+      },
+      max: {
+        en: "Message must not be longer than 150 characters.",
+        fa: "پیام شما نباید از 150 کاراکتر بیشتر باشد",
+      },
+    },
+    send: {
+      en: "Send",
+      fa: "ارسال ",
+    },
+    toast: {
+      title: {
+        en: "Success !",
+        fa: "تبریک",
+      },
+      description: {
+        en: "your message has been sent successfully",
+        fa: "پیام شما با موفقیت ارسال گردید ",
+      },
+    },
+  };
+
+  const FormSchema = z.object({
+    username: z
+      .string({
+        required_error: `${dataForm.username.require[lang]}`,
+      })
+      .min(2, {
+        message: `${dataForm.username.min[lang]}`,
+      })
+      .max(16, {
+        message: `${dataForm.username.max[lang]}`,
+      }),
+    email: z
+      .string({
+        required_error: `${dataForm.email.require[lang]}`,
+      })
+      .refine(
+        (value) => /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(value),
+        `${dataForm.email.refine[lang]}`,
+      ),
+
+    message: z
+      .string({
+        required_error: `${dataForm.message.require[lang]}`,
+      })
+      .min(10, {
+        message: `${dataForm.message.min[lang]}`,
+      })
+      .max(150, {
+        message: `${dataForm.message.max[lang]}`,
+      }),
+  });
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
-      title: "Success !",
-      description: `${data.username} , your message has been sent successfully`,
+      title: `${dataForm.toast.title[lang]}`,
+      description: `${data.username} , ${dataForm.toast.description[lang]}`,
       variant: "success",
+      className: "rtl:font-iranSans font text-lg font-kanit",
     });
   }
-
-  const dataForm = {
-    name: {
-      en: "Name",
-      fa: "نام",
-    },
-    email: {
-      en: "Email",
-      fa: "ایمیل",
-    },
-    message: {
-      en: "Message",
-      fa: "پیام",
-    },
-    send: {
-      en: "Send",
-      fa: "ارسال ",
-    },
-  };
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="order-1 w-5/6 space-y-6 font-kanit md:order-2 md:w-2/3"
+        className="order-1 w-5/6 space-y-6 font-kanit rtl:font-iranSans md:order-2 md:w-2/3"
       >
         {/* UserName Field */}
         <FormField
@@ -103,7 +150,7 @@ const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {
               <FormControl>
                 <Input
                   className="relative"
-                  placeholder={dataForm.name[lang]}
+                  placeholder={dataForm.username.form[lang]}
                   icon={<PersonIcon />}
                   {...field}
                 />
@@ -120,7 +167,7 @@ const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {
             <FormItem>
               <FormControl>
                 <Input
-                  placeholder={dataForm.email[lang]}
+                  placeholder={dataForm.email.form[lang]}
                   icon={<EnvelopeClosedIcon />}
                   {...field}
                 />
@@ -137,7 +184,7 @@ const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {
             <FormItem>
               <FormControl>
                 <Textarea
-                  placeholder={dataForm.message[lang]}
+                  placeholder={dataForm.message.form[lang]}
                   {...field}
                   icon={<TextAlignJustifyIcon />}
                 />
