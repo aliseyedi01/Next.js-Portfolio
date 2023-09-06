@@ -10,8 +10,8 @@ import "swiper/css/zoom";
 import "swiper/css/effect-flip";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { EffectFlip, Pagination, Navigation, Autoplay, Zoom } from "swiper/modules";
-import { ProjectDataType, projectsData } from "@/data/projectData";
+import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
+import { ProjectDataType } from "@/data/projectData";
 import { ReactNode } from "react";
 
 type Props = {
@@ -43,8 +43,7 @@ const ProjectPreview: React.FC<Props> = ({ children, Data }) => {
             }}
             navigation={true}
             loop={true}
-            zoom={true}
-            modules={[Zoom, EffectFlip, Pagination, Navigation, Autoplay]}
+            modules={[EffectFlip, Pagination, Navigation, Autoplay]}
             className="mySwiper rounded-lg "
           >
             {coverImages.map((image, index) => (
