@@ -19,6 +19,7 @@ import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 // icons
 import { PersonIcon, EnvelopeClosedIcon, TextAlignJustifyIcon } from "@radix-ui/react-icons";
+import { Locale } from "@/lib/i18n.config";
 
 const FormSchema = z.object({
   username: z
@@ -55,7 +56,7 @@ const FormSchema = z.object({
     }),
 });
 
-export function ContactForm() {
+const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -67,6 +68,25 @@ export function ContactForm() {
       variant: "success",
     });
   }
+
+  const dataForm = {
+    name: {
+      en: "Name",
+      fa: "نام",
+    },
+    email: {
+      en: "Email",
+      fa: "ایمیل",
+    },
+    message: {
+      en: "Message",
+      fa: "پیام",
+    },
+    send: {
+      en: "Send",
+      fa: "ارسال ",
+    },
+  };
 
   return (
     <Form {...form}>
@@ -81,7 +101,12 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input className="relative" placeholder="Name" icon={<PersonIcon />} {...field} />
+                <Input
+                  className="relative"
+                  placeholder={dataForm.name[lang]}
+                  icon={<PersonIcon />}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -94,7 +119,11 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input placeholder="Email" icon={<EnvelopeClosedIcon />} {...field} />
+                <Input
+                  placeholder={dataForm.email[lang]}
+                  icon={<EnvelopeClosedIcon />}
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -107,16 +136,22 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Textarea placeholder="Message" {...field} icon={<TextAlignJustifyIcon />} />
+                <Textarea
+                  placeholder={dataForm.message[lang]}
+                  {...field}
+                  icon={<TextAlignJustifyIcon />}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full font-alkatra">
-          Send Message
+        <Button type="submit" className="w-full font-alkatra rtl:font-iranSans">
+          {dataForm.send[lang]}
         </Button>
       </form>
     </Form>
   );
-}
+};
+
+export default ContactForm;

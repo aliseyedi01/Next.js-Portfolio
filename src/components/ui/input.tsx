@@ -9,7 +9,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, icon, ...props }, ref) => {
     return (
-      <div className="relative">
+      <div className="relative rtl:font-iranSans">
         {/* Add a relative container */}
         <input
           type={type}
