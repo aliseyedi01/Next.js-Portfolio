@@ -3,18 +3,23 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 import { BackPage } from "..";
+import { Locale } from "@/lib/i18n.config";
 
-const Resume: React.FC = () => {
-  const pathPdf =
-    "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resuum1.pdf?t=2023-08-28T08%3A03%3A51.434Z";
+const Resume: React.FC<{ lang: Locale }> = async ({ lang }) => {
+  const resume = {
+    en: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-en.pdf",
+    fa: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-fa.pdf",
+  };
+
+  let pathPdf = resume[lang];
 
   return (
     <div
       id="resume"
       className="relative flex h-full w-full flex-col items-center justify-center gap-2 px-6 pb-14 pt-20 md:pb-5 md:pt-14"
     >
-      <BackPage className="absolute left-6 top-12 " />
-      <Link href={pathPdf}>
+      <BackPage className="absolute left-7 top-16" />
+      <Link href={pathPdf} className="pt-3">
         <Button className="font-alkatra text-sm text-white">Download CV</Button>
       </Link>
       <div className="h-full w-[98%] md:w-[80%]">

@@ -117,7 +117,7 @@ export default function Navbar({ lang }: { lang: Locale }) {
         {/* Buttons */}
         <div className="flex items-center gap-2 font-kanit">
           {/* Resume */}
-          <Link href="/resume">
+          <Link href="/fa/resume">
             <Button
               size="icon"
               className="rounded-full bg-blue-600 text-xs text-white  md:text-base"

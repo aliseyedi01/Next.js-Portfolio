@@ -72,7 +72,7 @@ const Navbar1: React.FC<{ lang: Locale }> = async ({ lang }) => {
       {/* Buttons */}
       <div className="flex items-center gap-2 font-kanit">
         {/* Resume */}
-        <Link href="/resume">
+        <Link href={`${lang}/resume`}>
           <Button size="icon" className="rounded-full bg-blue-600 text-xs text-white  md:text-base">
             CV
           </Button>
