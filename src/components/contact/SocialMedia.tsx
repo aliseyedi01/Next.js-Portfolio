@@ -19,10 +19,10 @@ const SocialMedia: React.FC<{ lang: Locale }> = async ({ lang }) => {
   const dataSocial = [
     {
       name: `${contact.email}`,
-      value: "aliseyedi01@gmail.com",
+      value: "aliseyedi07@gmail.com",
       icon: <BiEnvelope />,
       color: "text-lime-600",
-      link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=aliseyedi01@gmail.com",
+      link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=aliseyedi07@gmail.com",
     },
     {
       name: `${contact.github}`,
