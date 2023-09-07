@@ -66,18 +66,6 @@
   mask: url("/svg/topScroll.svg") center center / contain no-repeat;
 }
 
-.swiper {
-  @apply h-full w-full;
-}
-
-.swiper-slide {
-  @apply flex items-center justify-center bg-background text-center text-base;
-}
-
-.swiper-slide img {
-  @apply block h-full w-full object-contain;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   @apply !text-blue-600 dark:!text-yellow-600;

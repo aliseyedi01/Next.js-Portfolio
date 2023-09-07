@@ -51,20 +51,18 @@ const ProjectPreview: React.FC<Props> = ({ children, Data, lang }) => {
             navigation={true}
             loop={true}
             modules={[EffectFlip, Pagination, Navigation, Autoplay]}
-            className="mySwiper rounded-lg "
+            className="h-full w-full"
           >
             {coverImages.map((image, index) => (
-              <SwiperSlide key={index}>
-                <div className="swiper-zoom-container">
-                  <Image
-                    src={image}
-                    width="400"
-                    height="400"
-                    loading="eager"
-                    alt="singleProject"
-                    className="h-full  w-full !rounded-lg  "
-                  />
-                </div>
+              <SwiperSlide key={index} className="flex items-center justify-center bg-background ">
+                <Image
+                  src={image}
+                  width="700"
+                  height="400"
+                  loading="eager"
+                  alt="singleProject"
+                  className="h-full w-full object-scale-down"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
