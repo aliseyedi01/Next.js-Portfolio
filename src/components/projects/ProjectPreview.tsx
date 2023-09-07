@@ -13,21 +13,28 @@ import "swiper/css/navigation";
 import { EffectFlip, Pagination, Navigation, Autoplay } from "swiper/modules";
 import { ProjectDataType } from "@/data/projectData";
 import { ReactNode } from "react";
+// i18n
+import { Locale } from "@/lib/i18n.config";
 
 type Props = {
   children: ReactNode;
   Data: ProjectDataType;
+  lang: Locale;
 };
 
-const ProjectPreview: React.FC<Props> = ({ children, Data }) => {
+const ProjectPreview: React.FC<Props> = ({ children, Data, lang }) => {
   const coverImages = Data.image;
+
+  const { title } = Data[lang];
 
   return (
     <div className="flex w-full flex-col gap-3 pt-16">
       {/* header */}
       <div className="flex items-center ">
         <BackPage />
-        <p className="text-md translate-y-[2px] font-alkatra">Project / Admin Panel 1</p>
+        <p className="text-md translate-y-[2px] font-alkatra rtl:font-iranSans">
+          {lang === "en" ? "Project" : "پروژه "} / {title}{" "}
+        </p>
       </div>
       {/* Project */}
       <div className="grid h-full w-full grid-cols-1 place-content-center place-items-center max-md:gap-6 max-md:pb-16 max-md:pt-12 md:h-[80vh] md:grid-cols-2">

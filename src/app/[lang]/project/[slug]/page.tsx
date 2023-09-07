@@ -16,7 +16,7 @@ const Pages = ({ params }: { params: { lang: Locale } }) => {
   }
 
   return (
-    <ProjectPreview Data={projectsDataShow}>
+    <ProjectPreview Data={projectsDataShow} lang={params.lang}>
       <ProjectInfo lang={params.lang} Data={projectsDataShow} />
     </ProjectPreview>
   );
