@@ -4,12 +4,35 @@ import { About, Contact, Home, NavItemMobile, Projects, Skills } from "@/compone
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n.config";
 import { notFound } from "next/navigation";
+// meta
+import { Metadata } from "next";
 
 // export function generateStaticParams() {
 //   return [{ lang: "en" }, { lang: "fa" }];
 // }
 
-const Page = ({ params }: { params: { lang: Locale } }) => {
+// types
+type Props = {
+  params: { lang: Locale };
+};
+
+// dynamic MetaData
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  let { lang } = params;
+
+  let meta = {
+    title: {
+      en: "Ali Seyedi",
+      fa: "علی سیدی",
+    },
+  };
+
+  return {
+    title: `${meta.title[lang]}`,
+  };
+}
+
+const Page: React.FC<Props> = ({ params }) => {
   const { lang } = params;
   if (!lang) {
     notFound();
