@@ -28,7 +28,7 @@ const ProjectPreview: React.FC<Props> = ({ children, Data, lang }) => {
   const { title } = Data[lang];
 
   return (
-    <div className="flex w-full flex-col gap-3 pt-16">
+    <div className="flex h-full w-full flex-col gap-3 pt-16 ">
       {/* header */}
       <div className="flex items-center ">
         <BackPage />

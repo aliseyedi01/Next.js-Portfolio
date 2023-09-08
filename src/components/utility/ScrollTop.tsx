@@ -1,15 +1,17 @@
 "use client";
-import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 // react
 import React, { useState, useEffect } from "react";
-// import CircleProgressBar from "./CircleProgressBar";
+import { useScrollPercentage } from "@/hooks/useScrollPercentage";
+import { usePathname } from "next/navigation";
 
 const ScrollTop: React.FC = () => {
   const scrollPercentage = useScrollPercentage();
   const [showTopButton, setShowTopButton] = useState<boolean>(false);
+  const pathname = usePathname();
 
   useEffect(() => {
-    setShowTopButton(Number(scrollPercentage) < 80);
+    let shotTopButton = Number(scrollPercentage) < 80 && !pathname.split("/")[2];
+    setShowTopButton(shotTopButton);
   }, [scrollPercentage]);
 
   const handleTop = () => {
@@ -58,10 +60,3 @@ const ScrollTop: React.FC = () => {
 };
 
 export default ScrollTop;
-
-{
-  /* svg to top */
-}
-{
-  /* <div className="svg-top absolute left-[7px] top-[5.5px] h-8 w-8 bg-indigo-950" /> */
-}
