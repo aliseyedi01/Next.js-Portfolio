@@ -1,9 +1,18 @@
-import { BackPage, ProjectAll } from "@/components";
-import ProjectCard from "@/components/projects/ProjectCard";
-import { getDictionary } from "@/lib/dictionary";
+import { ProjectAll } from "@/components";
 import { Locale } from "@/lib/i18n.config";
-import type { Metadata } from "next";
 
-export default function Page({ params }: { params: { lang: Locale } }) {
-  return <ProjectAll lang={params.lang} />;
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "fa" }];
 }
+
+// types
+type Props = {
+  params: { lang: Locale };
+};
+
+// export default function Page({ params }) {
+const Pages: React.FC<Props> = ({ params }) => {
+  return <ProjectAll lang={params.lang} />;
+};
+
+export default Pages;

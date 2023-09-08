@@ -12,6 +12,7 @@ import { Locale } from "@/lib/i18n.config";
 import Navbar1 from "@/components/navbar/Navbar1";
 // Fonts
 import localFont from "next/font/local";
+import NotFound from "./not-found";
 
 const iranSans = localFont({
   src: [
