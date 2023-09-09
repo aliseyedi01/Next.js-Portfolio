@@ -53,7 +53,7 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       {/* Links */}
       <div className="space-y-3">
         <h2 className="text-primary">{ProjectData.link}</h2>
-        <p className="flex items-center gap-2 pt-1 font-kanit text-xl">
+        <p className="title-project ">
           {Actions.map((action, index) => (
             <Link href={action.link} key={index} target="_blank">
               <TooltipProvider delayDuration={100}>
@@ -71,7 +71,7 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       {/* Language */}
       <div className="space-y-4">
         <h2 className="text-primary">{ProjectData.language}</h2>
-        <p className="flex items-center gap-2 font-kanit text-lg ">
+        <p className="title-project">
           {languages.map((language, index) => (
             <Badge variant="outline" key={index}>
               {language}
@@ -82,7 +82,7 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       {/* Technology */}
       <div className="space-y-5">
         <h2 className="text-primary">{ProjectData.Technologies}</h2>
-        <p className="flex items-center gap-2 font-kanit">
+        <p className="title-project">
           {stacks.map((stack, index) => (
             <Badge variant="outline" key={index}>
               {stack}
