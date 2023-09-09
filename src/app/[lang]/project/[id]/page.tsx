@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   return {
-    title: `${projects[id][lang]}`,
+    title: `${projects[id]?.[lang]}`,
   };
 }
 
