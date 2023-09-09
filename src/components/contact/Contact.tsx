@@ -3,10 +3,10 @@ import React from "react";
 // component
 import SocialMedia from "./SocialMedia";
 import ContactForm from "./ContactForm";
-// i18n
-import { Locale } from "@/lib/i18n.config";
+// types
+import { LangProps } from "@/types/common";
 
-const Contact: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const Contact: React.FC<LangProps> = async ({ lang }) => {
   return (
     <div
       id="contact"

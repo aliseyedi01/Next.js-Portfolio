@@ -4,11 +4,11 @@ import React from "react";
 // icons
 import { BiLogoLinkedin, BiEnvelope, BiLogoTelegram, BiLogoGithub } from "react-icons/bi";
 // i18n
-import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+//types
+import { LangProps } from "@/types/common";
 
-// const SocialMedia = ({lang}) => {
-const SocialMedia: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const SocialMedia: React.FC<LangProps> = async ({ lang }) => {
   const { contact } = await getDictionary(lang);
 
   const dataSocial = [

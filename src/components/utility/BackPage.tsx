@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "../ui/button";
 // icons
 import { TiArrowBack } from "react-icons/ti";
-
+// types
 type Props = {
   className?: string;
 };

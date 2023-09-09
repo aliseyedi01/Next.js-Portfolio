@@ -14,7 +14,6 @@ import UK from "@assets/image/flag/uk.jpg";
 
 export default function LanguageSwitcher() {
   const pathName = usePathname();
-  // console.log("path", pathName);
 
   const [currentImage, setCurrentImage] = useState(UK);
   const [currentPath, setCurrentPath] = useState(pathName);
@@ -22,7 +21,6 @@ export default function LanguageSwitcher() {
   const params = useParams();
 
   useEffect(() => {
-    // console.log("Hash:", window.location.hash);
     setHash(window.location.hash);
   }, [params]);
 

@@ -6,10 +6,11 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import Link from "next/link";
 // i18n
-import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+// types
+import { LangProps } from "@/types/common";
 
-const Home: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const Home: React.FC<LangProps> = async ({ lang }) => {
   const { home } = await getDictionary(lang);
   return (
     <div

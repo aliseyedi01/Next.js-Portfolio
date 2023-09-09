@@ -3,9 +3,10 @@ import { BackPage, ProjectCard } from "@/components";
 // i18n
 import { projectsData } from "@/data/projectData";
 import { getDictionary } from "@/lib/dictionary";
-import { Locale } from "@/lib/i18n.config";
+// types
+import { LangProps } from "@/types/common";
 
-const ProjectAll: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const ProjectAll: React.FC<LangProps> = async ({ lang }) => {
   const { Project } = await getDictionary(lang);
 
   const projectsDataShow = projectsData;

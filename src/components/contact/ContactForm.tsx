@@ -11,10 +11,10 @@ import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 // icons
 import { PersonIcon, EnvelopeClosedIcon, TextAlignJustifyIcon } from "@radix-ui/react-icons";
-// i18n
-import { Locale } from "@/lib/i18n.config";
+// types
+import { LangProps } from "@/types/common";
 
-const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {
+const ContactForm: React.FC<LangProps> = ({ lang }) => {
   const dataForm = {
     username: {
       form: {

@@ -1,10 +1,11 @@
 // i18n
-import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 // react
 import React from "react";
+// types
+import { LangProps } from "@/types/common";
 
-const About: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const About: React.FC<LangProps> = async ({ lang }) => {
   const { about } = await getDictionary(lang);
   return (
     <div

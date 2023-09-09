@@ -5,14 +5,11 @@ import { Locale } from "@/lib/i18n.config";
 // next
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-
 // types
-type Props = {
-  params: { lang: Locale };
-};
+import { PageProps } from "@/types/common";
 
 // dynamic MetaData
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   let { lang } = params;
 
   let meta = {
@@ -27,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-const Page: React.FC<Props> = ({ params }) => {
+const Page: React.FC<PageProps> = ({ params }) => {
   const { lang } = params;
   if (!lang) {
     notFound();

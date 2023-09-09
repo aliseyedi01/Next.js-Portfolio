@@ -15,7 +15,7 @@ import { ProjectDataType } from "@/data/projectData";
 import { ReactNode } from "react";
 // i18n
 import { Locale } from "@/lib/i18n.config";
-
+// types
 type Props = {
   children: ReactNode;
   Data: ProjectDataType;

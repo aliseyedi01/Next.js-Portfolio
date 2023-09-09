@@ -12,8 +12,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import { ProjectDataType } from "@/data/projectData";
-// data
-
+// types
 type Props = {
   lang: Locale;
   Data: ProjectDataType;

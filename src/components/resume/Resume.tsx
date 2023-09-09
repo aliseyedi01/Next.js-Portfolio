@@ -6,9 +6,9 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { BackPage } from "..";
 // i18n
-import { Locale } from "@/lib/i18n.config";
+import { LangProps } from "@/types/common";
 
-const Resume: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const Resume: React.FC<LangProps> = async ({ lang }) => {
   const resume = {
     en: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-en.pdf",
     fa: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-fa.pdf",

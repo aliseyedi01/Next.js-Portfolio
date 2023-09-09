@@ -18,9 +18,9 @@ interface NavItem {
   link: string;
   icon: React.ReactNode;
 }
+import { LangProps } from "@/types/common";
 // next
 import Link from "next/link";
-import { Locale } from "@/lib/i18n.config";
 
 const navItemsData: NavItem[] = [
   {
@@ -50,7 +50,7 @@ const navItemsData: NavItem[] = [
   },
 ];
 
-const NavItemMobile: React.FC<{ lang: Locale }> = ({ lang }) => {
+const NavItemMobile: React.FC<LangProps> = ({ lang }) => {
   const scrollPercentage = useScrollPercentage();
   const inverseScrollPercentage = 100 - scrollPercentage;
   const [activeSection, setActiveSection] = useState<string | null>(null);

@@ -23,11 +23,11 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 // i18n
-import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+// types
+import { LangProps } from "@/types/common";
 
-// const Skills: React.FC = () => {
-const Skills: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const Skills: React.FC<LangProps> = async ({ lang }) => {
   const { skill } = await getDictionary(lang);
 
   const skillCategories = [

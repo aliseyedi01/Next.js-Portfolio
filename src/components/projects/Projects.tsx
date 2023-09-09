@@ -7,11 +7,12 @@ import { Button } from "../ui/button";
 import { EnterIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 // i18n
-import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import { projectsData } from "@/data/projectData";
+// types
+import { LangProps } from "@/types/common";
 
-const Projects: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const Projects: React.FC<LangProps> = async ({ lang }) => {
   const { Project } = await getDictionary(lang);
   const projectsDataShow = projectsData.slice(0, 3);
 

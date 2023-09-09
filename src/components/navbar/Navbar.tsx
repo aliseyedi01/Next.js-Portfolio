@@ -15,10 +15,11 @@ import { ModeToggle } from "../theme/ModeToggle";
 import { Button } from "../ui/button";
 import { LanguageSwitcher } from "..";
 // i18n
-import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+// types
+import { LangProps } from "@/types/common";
 
-const Navbar: React.FC<{ lang: Locale }> = async ({ lang }) => {
+const Navbar: React.FC<LangProps> = async ({ lang }) => {
   const { header } = await getDictionary(lang);
 
   const navItemsData = [

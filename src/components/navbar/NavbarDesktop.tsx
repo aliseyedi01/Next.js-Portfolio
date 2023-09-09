@@ -1,6 +1,5 @@
 "use client";
 import { useScrollPercentage } from "@/hooks/useScrollPercentage";
-import { Locale } from "@/lib/i18n.config";
 
 export default function NavbarDesktop({ children }: { children: React.ReactNode }) {
   const scrollPercentage = useScrollPercentage();
