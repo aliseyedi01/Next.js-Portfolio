@@ -1,25 +1,15 @@
 // components
-import { BackPage } from "@/components";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 // next
-import Image from "next/image";
-// swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/zoom";
-import "swiper/css/effect-flip";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { EffectFlip, Pagination, Navigation, Autoplay, Zoom } from "swiper/modules";
+import Link from "next/link";
 // icons
 import { FiCodesandbox } from "react-icons/fi";
 import { FaGithub, FaGithubAlt, FaLaptopCode } from "react-icons/fa";
-import Link from "next/link";
+// i18n
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import { ProjectDataType, projectsData } from "@/data/projectData";
+import { ProjectDataType } from "@/data/projectData";
 
 type Props = {
   lang: Locale;

@@ -1,9 +1,10 @@
 "use client";
-
+// next
 import * as React from "react";
-import { BsSunFill, BsMoonStarsFill, BsDisplayFill } from "react-icons/bs";
 import { useTheme } from "next-themes";
-
+// icons
+import { BsSunFill, BsMoonStarsFill, BsDisplayFill } from "react-icons/bs";
+// component
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,

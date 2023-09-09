@@ -1,4 +1,4 @@
-import { Ubuntu, Kanit, Alkatra, Vazirmatn, Lalezar, Noto_Sans_Arabic } from "next/font/google";
+import { Ubuntu, Kanit, Alkatra, Lalezar, Noto_Sans_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 
 const iranSans = localFont({

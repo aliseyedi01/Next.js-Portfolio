@@ -1,5 +1,8 @@
+// component
 import { Resume } from "@/components";
+// i18n
 import { Locale } from "@/lib/i18n.config";
+// next
 import { Metadata } from "next";
 
 // types

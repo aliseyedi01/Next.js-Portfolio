@@ -1,10 +1,10 @@
+// react
 import React from "react";
-
+// component
 import SocialMedia from "./SocialMedia";
+import ContactForm from "./ContactForm";
 // i18n
 import { Locale } from "@/lib/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
-import ContactForm from "./ContactForm";
 
 const Contact: React.FC<{ lang: Locale }> = async ({ lang }) => {
   return (

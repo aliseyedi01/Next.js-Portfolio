@@ -7,7 +7,7 @@ const dictionaries = {
   fa: () => import("@/dictionaries/fa.json").then((module) => module.default),
 };
 
-// export const getDictionary = async (locale: Locale) =>
-//   dictionaries[locale]?.() ?? dictionaries.en();
+export const getDictionary = async (locale: Locale) =>
+  dictionaries[locale]?.() ?? dictionaries.en();
 
-export const getDictionary = async (locale: Locale) => dictionaries[locale]();
+// export const getDictionary = async (locale: Locale) => dictionaries[locale]();

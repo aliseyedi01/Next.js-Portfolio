@@ -1,8 +1,8 @@
 "use client";
-// react
+// next
 import React, { useState, useEffect } from "react";
-import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 import { usePathname } from "next/navigation";
+import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 
 const ScrollTop: React.FC = () => {
   const scrollPercentage = useScrollPercentage();

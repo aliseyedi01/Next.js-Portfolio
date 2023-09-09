@@ -1,5 +1,7 @@
+// next
 import { headers } from "next/headers";
 import Link from "next/link";
+// icons
 import { LuChevronLeft } from "react-icons/lu";
 
 export default function NotFound() {

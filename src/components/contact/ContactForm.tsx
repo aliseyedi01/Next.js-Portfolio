@@ -4,21 +4,14 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 // components
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/components/ui/use-toast";
 import { Textarea } from "@/components/ui/textarea";
 // icons
 import { PersonIcon, EnvelopeClosedIcon, TextAlignJustifyIcon } from "@radix-ui/react-icons";
+// i18n
 import { Locale } from "@/lib/i18n.config";
 
 const ContactForm: React.FC<{ lang: Locale }> = ({ lang }) => {

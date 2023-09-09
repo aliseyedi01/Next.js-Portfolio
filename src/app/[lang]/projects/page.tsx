@@ -1,7 +1,9 @@
+// component
 import { ProjectAll } from "@/components";
+// i18n
 import { Locale } from "@/lib/i18n.config";
+// next
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 export function generateStaticParams() {
   return [{ lang: "en" }, { lang: "fa" }];

@@ -1,13 +1,8 @@
+// next
 import Link from "next/link";
-
 import React from "react";
-import {
-  BiLogoLinkedin,
-  BiLogoTwitter,
-  BiEnvelope,
-  BiLogoTelegram,
-  BiLogoGithub,
-} from "react-icons/bi";
+// icons
+import { BiLogoLinkedin, BiEnvelope, BiLogoTelegram, BiLogoGithub } from "react-icons/bi";
 // i18n
 import { Locale } from "@/lib/i18n.config";
 import { getDictionary } from "@/lib/dictionary";

@@ -1,6 +1,7 @@
-import { Locale } from "@/lib/i18n.config";
+// next
 import Link from "next/link";
 import { headers } from "next/headers";
+// icons
 import { LuChevronLeft } from "react-icons/lu";
 
 const NotFound: React.FC = () => {

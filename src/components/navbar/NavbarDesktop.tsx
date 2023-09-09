@@ -2,7 +2,7 @@
 import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 import { Locale } from "@/lib/i18n.config";
 
-export default function Navbar({ children }: { children: React.ReactNode }) {
+export default function NavbarDesktop({ children }: { children: React.ReactNode }) {
   const scrollPercentage = useScrollPercentage();
   const shadowHeader = Number(scrollPercentage) < 80;
 

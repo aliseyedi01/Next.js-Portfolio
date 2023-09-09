@@ -1,8 +1,11 @@
 "use client";
-import Link from "next/link";
+// next
 import React from "react";
+import Link from "next/link";
+// component
 import { Button } from "../ui/button";
 import { BackPage } from "..";
+// i18n
 import { Locale } from "@/lib/i18n.config";
 
 const Resume: React.FC<{ lang: Locale }> = async ({ lang }) => {

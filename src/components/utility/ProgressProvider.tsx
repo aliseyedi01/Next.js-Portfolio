@@ -1,5 +1,5 @@
 "use client";
-
+// next
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 
 const ProgressProvider = ({ children }: { children: React.ReactNode }) => {

@@ -1,15 +1,10 @@
+// component
 import { About, Contact, Home, NavItemMobile, Projects, Skills } from "@/components";
-
 // i18n
-import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n.config";
+// next
 import { notFound } from "next/navigation";
-// meta
 import { Metadata } from "next";
-
-// export function generateStaticParams() {
-//   return [{ lang: "en" }, { lang: "fa" }];
-// }
 
 // types
 type Props = {

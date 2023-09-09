@@ -1,5 +1,6 @@
-import { BackPage } from "@/components";
-import ProjectCard from "@/components/projects/ProjectCard";
+// component
+import { BackPage, ProjectCard } from "@/components";
+// i18n
 import { projectsData } from "@/data/projectData";
 import { getDictionary } from "@/lib/dictionary";
 import { Locale } from "@/lib/i18n.config";
