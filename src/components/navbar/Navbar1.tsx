@@ -61,7 +61,7 @@ const Navbar1: React.FC<{ lang: Locale }> = async ({ lang }) => {
           <Link
             href={`/${lang}${item.link}`}
             key={item.name}
-            className={`flex items-center gap-1 rounded-lg px-2 py-1 font-medium capitalize hover:border-b  hover:bg-blue-400 ltr:font-ubuntu rtl:font-vazir dark:hover:bg-blue-800`}
+            className={`flex items-center gap-1 rounded-lg px-2 py-1 font-medium capitalize hover:border-b  hover:bg-blue-400 ltr:font-ubuntu rtl:font-arSans dark:hover:bg-blue-800`}
           >
             {item.name}
           </Link>

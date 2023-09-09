@@ -57,7 +57,7 @@ const SocialMedia: React.FC<{ lang: Locale }> = async ({ lang }) => {
         >
           <span className={`text-2xl max-md:mt-6 md:text-3xl ${item.color}`}>{item.icon}</span>
           <div className="font-kanit max-md:hidden">
-            <p className="font-bold capitalize rtl:font-vazir">{item.name}</p>
+            <p className="font-bold capitalize rtl:font-arSans">{item.name}</p>
             <p>{item.value}</p>
           </div>
         </Link>

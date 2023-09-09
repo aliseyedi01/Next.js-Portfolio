@@ -25,7 +25,7 @@ const NotFound: React.FC = () => {
       <h2>{data.title[lang]}</h2>
       <Link
         href={`/${lang}/projects`}
-        className="flex items-center gap-2 rounded-md bg-blue-400 px-2 py-1 font-kanit text-lg rtl:flex-row-reverse rtl:font-vazir"
+        className="flex items-center gap-2 rounded-md bg-blue-400 px-2 py-1 font-kanit text-lg rtl:flex-row-reverse rtl:font-arSans"
       >
         <LuChevronLeft className="text-lg" />
         {data.button[lang]}

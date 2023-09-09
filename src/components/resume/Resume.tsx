@@ -20,7 +20,7 @@ const Resume: React.FC<{ lang: Locale }> = async ({ lang }) => {
     >
       <BackPage className="absolute left-7 top-16" />
       <Link href={pathPdf} className="pt-3">
-        <Button className="font-alkatra text-sm text-white rtl:font-vazir">
+        <Button className="font-alkatra text-sm text-white rtl:font-arSans">
           {lang === "en" ? "Download CV" : "دانلود رزومه"}
         </Button>
       </Link>

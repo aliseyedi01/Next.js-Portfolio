@@ -69,7 +69,7 @@ const ProjectCard: React.FC<Props> = async ({ lang, Data }) => {
         {/* Information */}
         <div className="flex w-full flex-col items-center justify-center gap-2 px-4">
           {/* Title */}
-          <p className="self-start pt-3 text-left font-kanit font-bold rtl:font-vazir">{title}</p>
+          <p className="self-start pt-3 text-left font-kanit font-bold rtl:font-arSans">{title}</p>
           {/* Description */}
           <p className="line-clamp-3 w-full text-justify font-kanit text-sm rtl:font-iranSans">
             {description}

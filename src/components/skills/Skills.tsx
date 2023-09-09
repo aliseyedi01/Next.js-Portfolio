@@ -86,7 +86,7 @@ const Skills: React.FC<{ lang: Locale }> = async ({ lang }) => {
           key={index}
           className="flex h-full w-full flex-col items-start justify-start rounded-xl p-2 "
         >
-          <h3 className="w-full pb-1 text-xl font-bold text-primary ltr:font-ubuntu rtl:font-vazir">
+          <h3 className="w-full pb-1 text-xl font-semibold text-primary ltr:font-ubuntu rtl:font-arSans">
             {category.title}
           </h3>
           <hr className="h-1 w-full rounded-full border-0 from-primary to-background ltr:bg-gradient-to-r rtl:bg-gradient-to-l" />

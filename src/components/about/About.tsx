@@ -11,7 +11,7 @@ const About: React.FC<{ lang: Locale }> = async ({ lang }) => {
     >
       <img src="/svg/about.svg" alt="about" className="hidden h-[500px] w-[500px] md:block" />
       <div className="flex flex-col items-start justify-start gap-3 px-5">
-        <h2 className="font-ubuntu text-xl font-bold rtl:font-vazir ">{about.title}</h2>
+        <h2>{about.title}</h2>
         <ul className="list-disc text-justify text-xl font-normal leading-8 ltr:font-kanit rtl:font-iranSans">
           <li>{about.description.p1}</li>
           <li>{about.description.p2}</li>

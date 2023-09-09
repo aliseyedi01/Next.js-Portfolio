@@ -8,10 +8,12 @@
   }
   html {
     @apply scroll-smooth scrollbar scrollbar-track-background scrollbar-thumb-primary scrollbar-thumb-rounded-lg scrollbar-w-2 md:snap-y md:snap-mandatory;
-    /* @apply scroll-smooth scrollbar scrollbar-track-background scrollbar-thumb-primary scrollbar-thumb-rounded-lg scrollbar-w-2; */
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h2 {
+    @apply font-ubuntu text-xl font-bold rtl:font-arSans;
   }
 }
 

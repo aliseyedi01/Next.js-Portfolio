@@ -28,7 +28,6 @@ type Props = {
 
 const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
   const { ProjectData } = await getDictionary(lang);
-
   const { title, description, stacks, links, languages } = Data[lang];
 
   const Actions = [
@@ -58,17 +57,13 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
     <div className="md:x-2 flex h-full w-full flex-col gap-4 px-6 md:gap-8">
       {/* Title */}
       <div className="space-y-3">
-        <h2 className="font-ubuntu text-xl font-bold text-primary  rtl:font-vazir">
-          {ProjectData.title}
-        </h2>
-        <p className=" font-kanit text-lg rtl:font-vazir ">{title}</p>
+        <h2 className="text-primary">{ProjectData.title}</h2>
+        <p className=" font-kanit text-lg  ">{title}</p>
       </div>
       {/* Links */}
       <div className="space-y-3">
-        <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
-          {ProjectData.link}
-        </h2>
-        <p className=" flex items-center gap-2 pt-1 font-kanit text-xl">
+        <h2 className="text-primary">{ProjectData.link}</h2>
+        <p className="flex items-center gap-2 pt-1 font-kanit text-xl">
           {Actions.map((action, index) => (
             <Link href={action.link} key={index} target="_blank">
               <TooltipProvider delayDuration={100}>
@@ -85,10 +80,8 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       </div>
       {/* Language */}
       <div className="space-y-4">
-        <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
-          {ProjectData.language}
-        </h2>
-        <p className="flex items-center gap-2 font-kanit text-lg rtl:font-vazir">
+        <h2 className="text-primary">{ProjectData.language}</h2>
+        <p className="flex items-center gap-2 font-kanit text-lg ">
           {languages.map((language, index) => (
             <Badge variant="outline" key={index}>
               {language}
@@ -98,10 +91,8 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       </div>
       {/* Technology */}
       <div className="space-y-5">
-        <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
-          {ProjectData.Technologies}
-        </h2>
-        <p className=" flex items-center gap-2 font-kanit">
+        <h2 className="text-primary">{ProjectData.Technologies}</h2>
+        <p className="flex items-center gap-2 font-kanit">
           {stacks.map((stack, index) => (
             <Badge variant="outline" key={index}>
               {stack}
@@ -111,9 +102,7 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       </div>
       {/* Description */}
       <div className="space-y-3">
-        <h2 className="font-ubuntu text-xl font-bold text-primary rtl:font-vazir">
-          {ProjectData.description}
-        </h2>
+        <h2 className="text-primary">{ProjectData.description}</h2>
         <p className="text-justify font-kanit text-lg  rtl:font-iranSans">{description}</p>
       </div>
     </div>

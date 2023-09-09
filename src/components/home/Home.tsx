@@ -14,7 +14,7 @@ const Home: React.FC<{ lang: Locale }> = async ({ lang }) => {
   return (
     <div
       id="home"
-      className="grid h-screen w-full snap-start snap-always grid-cols-1 place-content-center justify-items-center gap-2 max-md:pt-20 md:h-screen md:grid-cols-2 "
+      className="grid h-screen w-full snap-start snap-always grid-cols-1 place-content-center justify-items-center gap-2 max-md:pt-20 md:h-screen md:grid-cols-2"
     >
       {/* info */}
       <div className="grid space-y-5 place-self-center self-center">
@@ -28,10 +28,10 @@ const Home: React.FC<{ lang: Locale }> = async ({ lang }) => {
         <h1 className="from-indigo-700 to-green-500 bg-clip-text py-2 text-2xl font-semibold tracking-wider text-transparent ltr:bg-gradient-to-r ltr:font-alkatra rtl:bg-gradient-to-l rtl:font-iranSans rtl:font-bold md:text-5xl">
           {home.name}
         </h1>
-        <h2 className="text-lg font-semibold tracking-wide text-indigo-950 ltr:font-ubuntu rtl:font-vazir dark:text-indigo-500 md:text-3xl">
+        <h2 className="text-lg tracking-wide text-indigo-950 rtl:font-arSans dark:text-indigo-500 md:text-3xl">
           {home.task}
         </h2>
-        <div className="flex gap-3 self-end font-kanit font-bold rtl:font-vazir">
+        <div className="rtl:font-rubik flex gap-3 self-end font-arSans font-bold">
           <Link href="#projects">
             <Button> {home.project}</Button>
           </Link>

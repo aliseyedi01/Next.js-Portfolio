@@ -21,10 +21,10 @@ export default function NotFound() {
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center gap-8 text-3xl">
       <h1 className="mb-2 font-ubuntu text-5xl ">404</h1>
-      <h2 className="font-kanit rtl:font-vazir">{data.title[lang]}</h2>
+      <h2 className="font-kanit rtl:font-arSans">{data.title[lang]}</h2>
       <Link
         href={`/${lang}`}
-        className="flex items-center gap-2 rounded-md bg-blue-400 px-2 py-1 font-kanit text-lg rtl:flex-row-reverse rtl:font-vazir"
+        className="flex items-center gap-2 rounded-md bg-blue-400 px-2 py-1 font-kanit text-lg rtl:flex-row-reverse rtl:font-arSans"
       >
         <LuChevronLeft className="text-xl" />
         {data.button[lang]}

@@ -96,7 +96,6 @@ export default function Navbar({ lang }: { lang: Locale }) {
       >
         {/* Title */}
         <h2 className="font-alkatra text-base md:text-lg">Ali Seyedi</h2>
-        {/* <h2 className="font-alkatra text-base md:text-lg">{header.name}</h2> */}
 
         {/* Items */}
         <nav className="hidden translate-x-6 items-center gap-6 md:flex">
