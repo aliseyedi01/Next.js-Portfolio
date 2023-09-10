@@ -1,5 +1,5 @@
 // component
-import { About, Contact, Home, NavItemMobile, Projects, Skills } from "@/components";
+import { About, Contact, Home, NavItemMobile, Projects, Skelton, Skills } from "@/components";
 // i18n
 import { Locale } from "@/lib/i18n.config";
 // next
@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 // types
 import { PageProps } from "@/types/common";
+import { Suspense } from "react";
 
 // dynamic MetaData
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -24,6 +25,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "fa" }];
+}
+
 const Page: React.FC<PageProps> = ({ params }) => {
   const { lang } = params;
   if (!lang) {
@@ -37,7 +42,9 @@ const Page: React.FC<PageProps> = ({ params }) => {
       <Skills lang={params.lang} />
       <Projects lang={params.lang} />
       <Contact lang={params.lang} />
-      <NavItemMobile lang={params.lang} />
+      <Suspense fallback={<Skelton />}>
+        <NavItemMobile lang={params.lang} />
+      </Suspense>
     </main>
   );
 };

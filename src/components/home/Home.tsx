@@ -1,6 +1,5 @@
-// react
-import React from "react";
 // next
+import React from "react";
 import Image from "next/image";
 // component
 import { Button } from "../ui/button";

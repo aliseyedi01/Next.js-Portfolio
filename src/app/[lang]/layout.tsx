@@ -1,14 +1,15 @@
+// next
+import { Suspense } from "react";
+import { cn } from "@/lib/utils";
 // style
 import "./globals.css";
 import { alkatra, iranSans, kanit, lalezar, ubuntu, arabSans } from "@/lib/font";
 // component
-import { Navbar, NavbarDesktop, ProgressProvider, ScrollTop } from "@/components";
+import { Navbar, NavbarDesktop, ProgressProvider, ScrollTop, Skelton } from "@/components";
 import { Toaster } from "@/components/ui/toaster";
-import { Locale } from "@/lib/i18n.config";
-
-// next
-import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme/them-provider";
+// i18n
+import { Locale, i18n } from "@/lib/i18n.config";
 
 export default function RootLayout({
   children,
@@ -29,15 +30,23 @@ export default function RootLayout({
           arabSans.variable,
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NavbarDesktop>
-            <Navbar lang={params.lang} />
-          </NavbarDesktop>
-          <ProgressProvider>{children}</ProgressProvider>
-          <ScrollTop />
-          <Toaster />
-        </ThemeProvider>
+        <Suspense fallback={<Skelton />}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <NavbarDesktop>
+              <Suspense fallback={<Skelton />}>
+                <Navbar lang={params.lang} />
+              </Suspense>
+            </NavbarDesktop>
+            <ProgressProvider>{children}</ProgressProvider>
+            <ScrollTop />
+            <Toaster />
+          </ThemeProvider>
+        </Suspense>
       </body>
     </html>
   );
+}
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
 }

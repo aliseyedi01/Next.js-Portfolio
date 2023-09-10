@@ -1,7 +1,7 @@
 // react
-import React from "react";
+import React, { Suspense } from "react";
 // component
-import { ProjectInfo, ProjectPreview } from "@/components";
+import { ProjectInfo, ProjectPreview, Skelton } from "@/components";
 // data
 import { projectsData } from "@/data/projectData";
 // i18n
@@ -58,10 +58,28 @@ const Pages: React.FC<Props> = ({ params }) => {
   }
 
   return (
-    <ProjectPreview Data={projectsDataShow} lang={lang}>
-      <ProjectInfo lang={lang} Data={projectsDataShow} />
-    </ProjectPreview>
+    <Suspense fallback={<Skelton />}>
+      <ProjectPreview Data={projectsDataShow} lang={lang}>
+        <Suspense fallback={<div>Loading</div>}>
+          <ProjectInfo lang={lang} Data={projectsDataShow} />
+        </Suspense>
+      </ProjectPreview>
+    </Suspense>
   );
 };
 
 export default Pages;
+
+export async function generateStaticParams() {
+  const lang = ["en", "fa"];
+  const id = ["1", "2", "3", "4", "5", "6"];
+  const result = [];
+
+  for (const l of lang) {
+    for (const i of id) {
+      result.push({ lang: l, id: i });
+    }
+  }
+
+  return result;
+}

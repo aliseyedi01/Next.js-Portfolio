@@ -1,4 +1,3 @@
-"use client";
 // next
 import React from "react";
 import Link from "next/link";
@@ -8,7 +7,7 @@ import { BackPage } from "..";
 // i18n
 import { LangProps } from "@/types/common";
 
-const Resume: React.FC<LangProps> = async ({ lang }) => {
+const Resume: React.FC<LangProps> = ({ lang }) => {
   const resume = {
     en: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-en.pdf",
     fa: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-fa.pdf",

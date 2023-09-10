@@ -1,13 +1,10 @@
 // component
 import { ProjectAll } from "@/components";
+import { i18n } from "@/lib/i18n.config";
 // types
 import { PageProps } from "@/types/common";
 // next
 import { Metadata } from "next";
-
-export function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "fa" }];
-}
 
 // dynamic MetaData
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -23,6 +20,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${meta.title[lang]}`,
   };
+}
+
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
 const Pages: React.FC<PageProps> = ({ params }) => {

@@ -4,6 +4,7 @@ export { default as About } from "./about/About";
 export { default as Skills } from "./skills/Skills";
 export { default as Resume } from "./resume/Resume";
 export { default as Contact } from "./contact/Contact";
+export { default as Skelton } from "./utility/Skelton";
 // utility
 export { default as ScrollTop } from "./utility/ScrollTop";
 export { default as BackPage } from "./utility/BackPage";
