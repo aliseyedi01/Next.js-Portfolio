@@ -3,11 +3,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 // component
-import { Button } from "../ui/button";
+
 // i18n
 import { getDictionary } from "@/lib/dictionary";
 // types
 import { LangProps } from "@/types/common";
+import { Button } from "../ui/button";
 
 const Home: React.FC<LangProps> = async ({ lang }) => {
   const { home } = await getDictionary(lang);
@@ -33,7 +34,7 @@ const Home: React.FC<LangProps> = async ({ lang }) => {
         </h2>
         <div className="rtl:font-rubik flex gap-3 self-end font-arSans font-bold">
           <Link href="#projects">
-            <Button> {home.project}</Button>
+            <Button>{home.project}</Button>
           </Link>
           <Link href="#contact">
             <Button variant="destructive">{home.contact}</Button>
