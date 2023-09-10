@@ -2,7 +2,7 @@
 import React from "react";
 // component
 import ProjectCard from "./ProjectCard";
-import { Button } from "../ui/button";
+import { Button } from "@components/ui/button";
 // icon
 import { EnterIcon } from "@radix-ui/react-icons";
 import Link from "next/link";

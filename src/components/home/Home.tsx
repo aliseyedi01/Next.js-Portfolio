@@ -8,7 +8,7 @@ import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
 // types
 import { LangProps } from "@/types/common";
-import { Button } from "../ui/button";
+import { Button } from "@components/ui/button";
 
 const Home: React.FC<LangProps> = async ({ lang }) => {
   const { home } = await getDictionary(lang);

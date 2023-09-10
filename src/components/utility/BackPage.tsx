@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 // component
-import { Button } from "../ui/button";
+import { Button } from "@components/ui/button";
 // icons
 import { TiArrowBack } from "react-icons/ti";
 // types
