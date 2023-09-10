@@ -62,7 +62,7 @@ const config: Config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         ubuntu: ["var(--font-ubuntu)"],
         kanit: ["var(--font-kanit)"],
-        alkatra: ["var(--font-alkatra)"],
+        mitr: ["var(--font-mitr)"],
         lalezar: ["var(--font-lalezar)"],
         iranSans: ["var(--font-iranSans)"],
         arSans: ["var(--font-arabSans)"],

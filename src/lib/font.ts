@@ -1,4 +1,4 @@
-import { Ubuntu, Kanit, Alkatra, Lalezar, Noto_Sans_Arabic } from "next/font/google";
+import { Ubuntu, Kanit, Mitr, Lalezar, Noto_Sans_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 
 const iranSans = localFont({
@@ -24,10 +24,10 @@ const kanit = Kanit({
   variable: "--font-kanit",
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
-const alkatra = Alkatra({
+const mitr = Mitr({
   subsets: ["latin"],
-  variable: "--font-alkatra",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-mitr",
+  weight: ["300", "400", "500", "600", "700"],
 });
 const lalezar = Lalezar({
   subsets: ["latin"],
@@ -41,4 +41,4 @@ const arabSans = Noto_Sans_Arabic({
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
 
-export { iranSans, ubuntu, kanit, alkatra, lalezar, arabSans };
+export { iranSans, ubuntu, kanit, mitr, lalezar, arabSans };

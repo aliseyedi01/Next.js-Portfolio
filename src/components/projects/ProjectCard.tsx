@@ -103,7 +103,7 @@ const ProjectCard: React.FC<Props> = async ({ lang, Data }) => {
                 href={`/${lang}/project/${id}`}
                 className="group self-end px-2 py-1 text-indigo-600 transition-all duration-200 ease-in-out dark:text-white"
               >
-                <span className="bg-gradient-to-r from-indigo-400 to-indigo-700 bg-[length:0%_2px] bg-left-bottom bg-no-repeat font-alkatra transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] rtl:font-iranSans dark:from-slate-600 dark:to-slate-50">
+                <span className="bg-gradient-to-r from-indigo-400 to-indigo-700 bg-[length:0%_2px] bg-left-bottom bg-no-repeat font-mitr transition-all duration-500 ease-out group-hover:bg-[length:100%_2px] rtl:font-iranSans dark:from-slate-600 dark:to-slate-50">
                   {ProjectCards.details}
                 </span>
               </Link>

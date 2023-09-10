@@ -5,10 +5,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 // components
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
-import { Textarea } from "@/components/ui/textarea";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { Button } from "../ui/button";
+import { toast } from "../ui/use-toast";
 // icons
 import { PersonIcon, EnvelopeClosedIcon, TextAlignJustifyIcon } from "@radix-ui/react-icons";
 // types
@@ -186,7 +186,7 @@ const ContactForm: React.FC<LangProps> = ({ lang }) => {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full font-alkatra rtl:font-iranSans">
+        <Button type="submit" className="w-full font-mitr rtl:font-iranSans">
           {dataForm.send[lang]}
         </Button>
       </form>

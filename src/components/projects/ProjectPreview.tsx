@@ -32,7 +32,7 @@ const ProjectPreview: React.FC<Props> = ({ children, Data, lang }) => {
       {/* header */}
       <div className="flex items-center ">
         <BackPage />
-        <p className="text-md translate-y-[2px] font-alkatra rtl:font-iranSans">
+        <p className="text-md translate-y-[2px] font-mitr rtl:font-iranSans">
           {lang === "en" ? "Project" : "پروژه "} / {title}
         </p>
       </div>

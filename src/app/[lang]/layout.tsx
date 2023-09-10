@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { cn } from "@/lib/utils";
 // style
 import "./globals.css";
-import { alkatra, iranSans, kanit, lalezar, ubuntu, arabSans } from "@/lib/font";
+import { iranSans, kanit, lalezar, ubuntu, arabSans, mitr } from "@/lib/font";
 // component
 import { Navbar, NavbarDesktop, ProgressProvider, ScrollTop, Skelton } from "@/components";
 import { Toaster } from "@/components/ui/toaster";
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={cn(
           ubuntu.variable,
-          alkatra.variable,
+          mitr.variable,
           kanit.variable,
           lalezar.variable,
           iranSans.variable,

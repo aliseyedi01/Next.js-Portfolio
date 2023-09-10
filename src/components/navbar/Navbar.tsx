@@ -9,11 +9,10 @@ import {
 } from "@radix-ui/react-icons";
 // next
 import Link from "next/link";
-
 // component
 import { ModeToggle } from "../theme/ModeToggle";
-import { Button } from "../ui/button";
 import { LanguageSwitcher } from "..";
+import { Button } from "../ui/button";
 // i18n
 import { getDictionary } from "@/lib/dictionary";
 // types
@@ -53,7 +52,7 @@ const Navbar: React.FC<LangProps> = async ({ lang }) => {
   return (
     <>
       {/* Title */}
-      <h2 className="font-alkatra text-base rtl:font-iranSans rtl:font-bold md:text-lg">
+      <h2 className="font-mitr text-base rtl:font-iranSans rtl:font-bold md:text-lg">
         {header.name}
       </h2>
       {/* Items */}
