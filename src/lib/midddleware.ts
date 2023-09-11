@@ -19,13 +19,22 @@ function getLocale(request: NextRequest): string | undefined {
 
 // middleware
 export function middleware(request: NextRequest) {
+  // console.log("use middleware");
+  console.log("request", request);
   const pathname = request.nextUrl.pathname;
+  // console.log("pathname", pathname);
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
+
+  console.log("miss locale", pathnameIsMissingLocale);
   // Redirect if there is no locale
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
+
+    // The new URL is now /en-US/products
+    // return NextResponse.redirect(new URL(`/${locale}/${pathname}`, request.url));
+
     return NextResponse.redirect(
       new URL(`/${locale}${pathname.startsWith("/") ? "" : "/"}${pathname}`, request.url),
     );
