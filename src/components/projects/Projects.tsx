@@ -12,7 +12,7 @@ import { projectsData } from "@/data/projectData";
 // types
 import { LangProps } from "@/types/common";
 // component
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 
 const Projects: React.FC<LangProps> = async ({ lang }) => {
   const { Project } = await getDictionary(lang);

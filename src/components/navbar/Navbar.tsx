@@ -12,7 +12,7 @@ import Link from "next/link";
 // component
 import { ModeToggle } from "../theme/ModeToggle";
 import { LanguageSwitcher } from "..";
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 // i18n
 import { getDictionary } from "@/lib/dictionary";
 // types

@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 // component
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 import { BackPage } from "..";
 // i18n
 import { LangProps } from "@/types/common";

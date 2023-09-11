@@ -2,7 +2,7 @@
 // react
 import React, { useEffect, useState } from "react";
 // component
-import { Button } from "../ui/button";
+import { Button } from "../ui/Button";
 // next
 import Image from "next/image";
 import Link from "next/link";
