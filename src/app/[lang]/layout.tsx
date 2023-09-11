@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { iranSans, kanit, lalezar, ubuntu, arabSans, mitr } from "@/lib/font";
 // component
-import { Navbar, NavbarDesktop, ProgressProvider, ScrollTop, Skelton } from "@/components";
+import { Navbar, NavbarDesktop, ProgressProvider, ScrollTop, Spiner } from "@/components";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme/them-provider";
 // i18n
@@ -30,10 +30,10 @@ export default function RootLayout({
           arabSans.variable,
         )}
       >
-        <Suspense fallback={<Skelton />}>
+        <Suspense fallback={<Spiner />}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <NavbarDesktop>
-              <Suspense fallback={<Skelton />}>
+              <Suspense fallback={<Spiner />}>
                 <Navbar lang={params.lang} />
               </Suspense>
             </NavbarDesktop>

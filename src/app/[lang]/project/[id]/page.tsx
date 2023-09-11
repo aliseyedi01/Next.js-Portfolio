@@ -1,7 +1,7 @@
 // react
 import React, { Suspense } from "react";
 // component
-import { ProjectInfo, ProjectPreview, Skelton } from "@/components";
+import { ProjectInfo, ProjectPreview, Spiner } from "@/components";
 // data
 import { projectsData } from "@/data/projectData";
 // i18n
@@ -58,7 +58,7 @@ const Pages: React.FC<Props> = ({ params }) => {
   }
 
   return (
-    <Suspense fallback={<Skelton />}>
+    <Suspense fallback={<Spiner />}>
       <ProjectPreview Data={projectsDataShow} lang={lang}>
         <Suspense fallback={<div>Loading</div>}>
           <ProjectInfo lang={lang} Data={projectsDataShow} />

@@ -1,5 +1,5 @@
 // component
-import { About, Contact, Home, NavItemMobile, Projects, Skelton, Skills } from "@/components";
+import { About, Contact, Home, NavItemMobile, Projects, Spiner, Skills } from "@/components";
 // i18n
 import { Locale } from "@/lib/i18n.config";
 // next
@@ -42,7 +42,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
       <Skills lang={params.lang} />
       <Projects lang={params.lang} />
       <Contact lang={params.lang} />
-      <Suspense fallback={<Skelton />}>
+      <Suspense fallback={<Spiner />}>
         <NavItemMobile lang={params.lang} />
       </Suspense>
     </main>
