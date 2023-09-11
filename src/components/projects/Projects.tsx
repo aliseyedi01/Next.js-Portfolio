@@ -2,7 +2,7 @@
 import React from "react";
 // component
 import ProjectCard from "./ProjectCard";
-import { Button } from "@components/ui/button";
+
 // icon
 import { EnterIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
@@ -11,6 +11,8 @@ import { getDictionary } from "@/lib/dictionary";
 import { projectsData } from "@/data/projectData";
 // types
 import { LangProps } from "@/types/common";
+// component
+import { Button } from "../ui/button";
 
 const Projects: React.FC<LangProps> = async ({ lang }) => {
   const { Project } = await getDictionary(lang);
@@ -26,12 +28,16 @@ const Projects: React.FC<LangProps> = async ({ lang }) => {
           <ProjectCard lang={lang} Data={project} key={index} />
         ))}
       </div>
-      <Link href={`/${lang}/projects`}>
-        <Button className="flex items-center justify-center gap-2 font-ubuntu rtl:font-iranSans">
+
+      <Button
+        className="flex items-center justify-center gap-2 font-ubuntu rtl:font-iranSans"
+        asChild
+      >
+        <Link href={`/${lang}/projects`}>
           <EnterIcon />
           {Project.allProjects}
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 // icons
 import { BsSunFill, BsMoonStarsFill, BsDisplayFill } from "react-icons/bs";
 // component
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,

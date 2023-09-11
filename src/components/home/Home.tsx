@@ -8,7 +8,7 @@ import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
 // types
 import { LangProps } from "@/types/common";
-import { Button } from "@components/ui/button";
+import { Button } from "../ui/button";
 
 const Home: React.FC<LangProps> = async ({ lang }) => {
   const { home } = await getDictionary(lang);
@@ -33,12 +33,13 @@ const Home: React.FC<LangProps> = async ({ lang }) => {
           {home.task}
         </h2>
         <div className="rtl:font-rubik flex gap-3 self-end font-arSans font-bold">
-          <Link href="#projects">
-            <Button>{home.project}</Button>
-          </Link>
-          <Link href="#contact">
-            <Button variant="destructive">{home.contact}</Button>
-          </Link>
+          <Button asChild>
+            <Link href="#projects">{home.project} </Link>
+          </Button>
+
+          <Button variant="destructive" asChild>
+            <Link href="#contact">{home.contact} </Link>
+          </Button>
         </div>
       </div>
       {/* svg */}

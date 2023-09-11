@@ -12,7 +12,7 @@ import Link from "next/link";
 // component
 import { ModeToggle } from "../theme/ModeToggle";
 import { LanguageSwitcher } from "..";
-import { Button } from "@components/ui/button";
+import { Button } from "../ui/button";
 // i18n
 import { getDictionary } from "@/lib/dictionary";
 // types
@@ -52,7 +52,7 @@ const Navbar: React.FC<LangProps> = async ({ lang }) => {
   return (
     <>
       {/* Title */}
-      <h2 className="font-mitr text-base rtl:font-iranSans rtl:font-bold md:text-lg">
+      <h2 className="font-mitr text-base font-medium rtl:font-iranSans md:text-lg">
         {header.name}
       </h2>
       {/* Items */}
@@ -70,11 +70,15 @@ const Navbar: React.FC<LangProps> = async ({ lang }) => {
       {/* Buttons */}
       <div className="flex items-center gap-2 font-kanit">
         {/* Resume */}
-        <Link href={`/${lang}/resume`}>
-          <Button size="icon" className="rounded-full bg-blue-600 text-xs text-white  md:text-base">
-            CV
-          </Button>
-        </Link>
+
+        <Button
+          asChild
+          size="icon"
+          className="rounded-full bg-blue-600 text-xs text-white  md:text-base"
+        >
+          <Link href={`/${lang}/resume`}> CV </Link>
+        </Button>
+
         {/* Bilingual */}
         <LanguageSwitcher />
         {/* DarkMode */}
