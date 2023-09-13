@@ -6,7 +6,6 @@ import {
   BiLogoReact,
   BiLogoCss3,
   BiLogoRedux,
-  BiLibrary,
   BiCodeAlt,
   BiCubeAlt,
   BiLogoGit,
@@ -21,6 +20,8 @@ import {
   SiSupabase,
   SiFigma,
   SiTailwindcss,
+  SiMui,
+  SiReactquery,
 } from "react-icons/si";
 // i18n
 import { getDictionary } from "@/lib/dictionary";
@@ -45,6 +46,7 @@ const Skills: React.FC<LangProps> = async ({ lang }) => {
         { name: "Next.js", icon: <SiNextdotjs />, color: "text-teal-500" },
         { name: "Redux", icon: <BiLogoRedux />, color: "text-purple-500" },
         { name: "Redux Toolkit", icon: <BiCubeAlt />, color: "text-red-600" },
+        { name: "Redux Query", icon: <SiReactquery />, color: "text-red-400" },
       ],
     },
     {
@@ -59,7 +61,7 @@ const Skills: React.FC<LangProps> = async ({ lang }) => {
     {
       title: `${skill.component}`,
       skills: [
-        { name: "Material-UI", icon: <BiLibrary />, color: "text-blue-500" },
+        { name: "Material-UI", icon: <SiMui />, color: "text-blue-500" },
         { name: "Ant Design", icon: <SiAntdesign />, color: "text-red-600" },
         { name: "Shadcn UI", icon: <BiCodeAlt />, color: "text-indigo-500" },
       ],
