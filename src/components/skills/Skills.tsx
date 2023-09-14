@@ -7,7 +7,6 @@ import {
   BiLogoCss3,
   BiLogoRedux,
   BiCodeAlt,
-  BiCubeAlt,
   BiLogoGit,
 } from "react-icons/bi";
 import {
@@ -45,7 +44,7 @@ const Skills: React.FC<LangProps> = async ({ lang }) => {
         { name: "React.js", icon: <BiLogoReact />, color: "text-blue-600" },
         { name: "Next.js", icon: <SiNextdotjs />, color: "text-teal-500" },
         { name: "Redux", icon: <BiLogoRedux />, color: "text-purple-500" },
-        { name: "Redux Toolkit", icon: <BiCubeAlt />, color: "text-red-600" },
+        { name: "Redux Toolkit", icon: <BiLogoRedux />, color: "text-red-600" },
         { name: "Redux Query", icon: <SiReactquery />, color: "text-red-400" },
       ],
     },
