@@ -17,35 +17,10 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   let { id, lang } = params;
 
-  let projects: any = {
-    1: {
-      en: "Admin Panel",
-      fa: "ادمین پنل ",
-    },
-    2: {
-      en: "ToDo List App",
-      fa: "اپلیکیشن لیست وظایف",
-    },
-    3: {
-      en: "Movie App",
-      fa: "اپلیکیشن فیلم",
-    },
-    4: {
-      en: "Music App",
-      fa: "اپلیکیشن موزیک",
-    },
-    5: {
-      en: "Video Player",
-      fa: "پخش ویدیو",
-    },
-    6: {
-      en: "Weather App",
-      fa: "اپلیکیشن پیش بینی هوا",
-    },
-  };
+  let project = projectsData.find((project) => project.id === id);
 
   return {
-    title: `${projects[id]?.[lang]}`,
+    title: project?.[lang].title,
   };
 }
 
