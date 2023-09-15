@@ -45,16 +45,21 @@ const Pages: React.FC<Props> = ({ params }) => {
 
 export default Pages;
 
+interface LanguageIdPair {
+  lang: string;
+  id: string;
+}
+
 export async function generateStaticParams() {
   const lang = ["en", "fa"];
-  const id = ["1", "2", "3", "4", "5", "6"];
-  const result = [];
+  const ids = ["1", "2", "3", "4", "5", "6"];
+  const result: LanguageIdPair[] = [];
 
-  for (const l of lang) {
-    for (const i of id) {
+  lang.forEach((l) => {
+    ids.forEach((i) => {
       result.push({ lang: l, id: i });
-    }
-  }
+    });
+  });
 
   return result;
 }
