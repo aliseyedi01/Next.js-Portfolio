@@ -1,7 +1,5 @@
 // component
 import { About, Contact, Home, NavItemMobile, Projects, Spiner, Skills } from "@/components";
-// i18n
-import { Locale } from "@/lib/i18n.config";
 // next
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
