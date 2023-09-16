@@ -53,7 +53,7 @@ const Navbar: React.FC<LangProps> = async ({ lang }) => {
     <>
       {/* Title */}
       <h2 className="font-mitr text-base font-medium rtl:font-iranSans md:text-lg">
-        {header.name}
+        <Link href={`/${lang}`}>{header.name}</Link>
       </h2>
       {/* Items */}
       <nav className="hidden translate-x-6 items-center gap-6 md:flex">
