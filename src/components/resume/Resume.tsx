@@ -9,8 +9,8 @@ import { LangProps } from "@/types/common";
 
 const Resume: React.FC<LangProps> = ({ lang }) => {
   const resume = {
-    en: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-en.pdf",
-    fa: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/resume-fa.pdf",
+    en: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/English.pdf?t=2023-10-01T16%3A47%3A18.584Z",
+    fa: "https://tsnfxzvybnnhqwjcqvej.supabase.co/storage/v1/object/public/other/Persian.pdf?t=2023-10-01T16%3A48%3A14.804Z",
   };
 
   let pathPdf = resume[lang];
