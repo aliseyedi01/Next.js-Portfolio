@@ -20,16 +20,16 @@ const Home: React.FC<LangProps> = async ({ lang }) => {
       {/* info */}
       <div className="grid space-y-5 place-self-center self-center">
         <Image
-          src="/image/profile.jpg"
-          height={100}
-          width={100}
+          src="/image/profile.png"
+          height={150}
+          width={150}
           alt="profile"
-          className="rounded-full"
+          className="translate-x-4 -rotate-1 rounded-full"
         />
-        <h1 className="from-indigo-700 to-green-500 bg-clip-text py-2 font-mitr text-2xl font-semibold tracking-wider text-transparent ltr:bg-gradient-to-r rtl:bg-gradient-to-l rtl:font-iranSans rtl:font-bold md:text-5xl">
+        <h1 className="from-indigo-700 to-green-500 bg-clip-text py-2 font-mitr text-3xl font-semibold tracking-wider text-transparent ltr:bg-gradient-to-r rtl:bg-gradient-to-l rtl:font-iranSans rtl:font-bold md:text-4xl">
           {home.name}
         </h1>
-        <h2 className="text-lg tracking-wide text-indigo-950 rtl:font-arSans dark:text-indigo-500 md:text-3xl">
+        <h2 className="text-xl tracking-wide text-indigo-950 rtl:font-arSans dark:text-indigo-500 md:text-3xl">
           {home.task}
         </h2>
         <div className="rtl:font-rubik flex gap-3 self-end font-arSans font-bold">
