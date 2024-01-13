@@ -48,7 +48,7 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
       {/* Title */}
       <div className="space-y-3">
         <h2 className="text-primary">{ProjectData.title}</h2>
-        <p className=" font-kanit text-lg  ">{title}</p>
+        <p className="font-kanit text-lg rtl:font-iranSans">{title}</p>
       </div>
       {/* Links */}
       <div className="space-y-3">
@@ -73,7 +73,7 @@ const ProjectInfo: React.FC<Props> = async ({ lang, Data }) => {
         <h2 className="text-primary">{ProjectData.language}</h2>
         <p className="title-project">
           {languages.map((language, index) => (
-            <Badge variant="outline" key={index}>
+            <Badge variant="outline" key={index} className="font-kanit rtl:font-iranSans">
               {language}
             </Badge>
           ))}
