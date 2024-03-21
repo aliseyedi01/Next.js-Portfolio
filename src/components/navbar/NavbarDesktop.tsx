@@ -3,7 +3,8 @@ import { useScrollPercentage } from "@/hooks/useScrollPercentage";
 
 export default function NavbarDesktop({ children }: { children: React.ReactNode }) {
   const scrollPercentage = useScrollPercentage();
-  const shadowHeader = Number(scrollPercentage) < 80;
+
+  const shadowHeader = scrollPercentage < 80 && scrollPercentage > 0;
 
   return (
     <div className="relative">

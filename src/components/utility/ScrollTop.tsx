@@ -10,7 +10,8 @@ const ScrollTop: React.FC = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    let shotTopButton = Number(scrollPercentage) < 80 && !pathname.split("/")[2];
+    let shotTopButton =
+      Number(scrollPercentage) !== -1 && Number(scrollPercentage) < 80 && !pathname.split("/")[2];
     setShowTopButton(shotTopButton);
   }, [scrollPercentage]);
 
