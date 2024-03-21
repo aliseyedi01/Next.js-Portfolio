@@ -51,8 +51,12 @@ const navItemsData: NavItem[] = [
 ];
 
 const NavItemMobile: React.FC<LangProps> = ({ lang }) => {
-  const scrollPercentage = useScrollPercentage();
+  let scrollPercentage = useScrollPercentage();
+  if (scrollPercentage == -1) {
+    scrollPercentage = 100;
+  }
   const inverseScrollPercentage = 100 - scrollPercentage;
+
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const pathname = usePathname();
 
