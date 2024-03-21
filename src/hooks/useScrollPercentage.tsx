@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
 export const useScrollPercentage = () => {
-  const [scrollPercentage, setScrollPercentage] = useState<number>();
+  // const [scrollPercentage, setScrollPercentage] = useState<number>(0);
+  const [scrollPercentage, setScrollPercentage] = useState<number | null>(null);
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
